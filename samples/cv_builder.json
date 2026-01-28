@@ -1,0 +1,174 @@
+{
+  "formTitle": "CV Builder Form",
+  "sections": ["Personal Details", "Professional Summary", "Work Experience", "Education", "Skills", "Certifications & Awards", "Additional Information"],
+  "fields": [
+    {
+      "type": "text",
+      "label": "Full Name",
+      "section": "Personal Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Job Title / Professional Headline",
+      "section": "Personal Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Email Address",
+      "section": "Personal Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Phone Number",
+      "section": "Personal Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "LinkedIn Profile",
+      "section": "Personal Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Portfolio Website",
+      "section": "Personal Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "City, Country",
+      "section": "Personal Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Professional Summary",
+      "section": "Professional Summary",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Company Name",
+      "section": "Work Experience",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Job Title",
+      "section": "Work Experience",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Employment Period",
+      "section": "Work Experience",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Job Responsibilities & Achievements",
+      "section": "Work Experience",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Institution Name",
+      "section": "Education",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Degree / Qualification",
+      "section": "Education",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Field of Study",
+      "section": "Education",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Graduation Year",
+      "section": "Education",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Technical Skills",
+      "section": "Skills",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Soft Skills",
+      "section": "Skills",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Languages",
+      "section": "Skills",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Certifications",
+      "section": "Certifications & Awards",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Awards & Honors",
+      "section": "Certifications & Awards",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Volunteer Experience",
+      "section": "Additional Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Projects",
+      "section": "Additional Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Hobbies & Interests",
+      "section": "Additional Information",
+      "priority": "normal",
+      "required": false
+    }
+  ]
+}
