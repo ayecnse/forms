@@ -1,0 +1,385 @@
+{
+  "formTitle": "Invention Disclosure Form",
+  "sections": ["Inventor Information", "Invention Overview", "Stage of Development", "Technical Details", "Prior Art & Novelty", "Commercial Potential", "Intellectual Property Considerations", "Collaboration & Funding", "Publications & Disclosures", "Supporting Documentation"],
+  "fields": [
+    {
+      "type": "text",
+      "label": "Lead Inventor Name",
+      "section": "Inventor Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Lead Inventor Email",
+      "section": "Inventor Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Lead Inventor Phone",
+      "section": "Inventor Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Lead Inventor Affiliation/Organization",
+      "section": "Inventor Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Co-Inventors (Names, Contributions, Contact Info)",
+      "section": "Inventor Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Country/Jurisdiction of Primary Inventor",
+      "section": "Inventor Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Invention Title",
+      "section": "Invention Overview",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Technology Field",
+      "section": "Invention Overview",
+      "priority": "normal",
+      "required": false,
+      "options": ["Biotechnology", "Pharmaceuticals", "Medical Devices", "Electronics", "Software/IT", "Mechanical Engineering", "Chemical Engineering", "Materials Science", "Agriculture", "Energy", "Environmental Technology", "Telecommunications", "Other"]
+    },
+    {
+      "type": "textarea",
+      "label": "Brief Description of Invention",
+      "section": "Invention Overview",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Problem Solved by Invention",
+      "section": "Invention Overview",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date of Conception",
+      "section": "Stage of Development",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Current Stage of Development",
+      "section": "Stage of Development",
+      "priority": "normal",
+      "required": false,
+      "options": ["Concept/Idea Only", "Preliminary Research", "Theoretical Model Developed", "Computer Simulation/Modeling", "Laboratory Proof of Concept", "Prototype Built", "Prototype Tested", "Pilot Scale Testing", "Pre-Commercial Development", "Ready for Commercialization"]
+    },
+    {
+      "type": "radio",
+      "label": "Has the invention been reduced to practice?",
+      "section": "Stage of Development",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes - Actual", "Yes - Constructive", "No", "Partially"]
+    },
+    {
+      "type": "textarea",
+      "label": "Description of Reduction to Practice",
+      "section": "Stage of Development",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Detailed Technical Description",
+      "section": "Technical Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Key Features and Novel Aspects",
+      "section": "Technical Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Advantages Over Existing Solutions",
+      "section": "Technical Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Possible Variations or Alternative Embodiments",
+      "section": "Technical Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Materials, Components, or Methods Used",
+      "section": "Technical Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Are you aware of similar existing solutions?",
+      "section": "Prior Art & Novelty",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No", "Unsure"]
+    },
+    {
+      "type": "textarea",
+      "label": "Description of Known Prior Art",
+      "section": "Prior Art & Novelty",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "How Does Your Invention Differ?",
+      "section": "Prior Art & Novelty",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Relevant Patents or Publications",
+      "section": "Prior Art & Novelty",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Have you conducted a prior art search?",
+      "section": "Prior Art & Novelty",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No", "Partial"]
+    },
+    {
+      "type": "textarea",
+      "label": "Target Market or Industry",
+      "section": "Commercial Potential",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Potential Applications",
+      "section": "Commercial Potential",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Potential Licensees or Commercial Partners",
+      "section": "Commercial Potential",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Estimated Time to Market",
+      "section": "Commercial Potential",
+      "priority": "normal",
+      "required": false,
+      "options": ["Less than 1 year", "1-2 years", "2-5 years", "5-10 years", "More than 10 years", "Unknown"]
+    },
+    {
+      "type": "textarea",
+      "label": "Market Size Estimate",
+      "section": "Commercial Potential",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "checkbox",
+      "label": "Desired Protection Type",
+      "section": "Intellectual Property Considerations",
+      "priority": "normal",
+      "required": false,
+      "options": ["Patent", "Utility Model", "Design Patent/Registration", "Trade Secret", "Copyright", "Trademark", "Unsure"]
+    },
+    {
+      "type": "checkbox",
+      "label": "Target Jurisdictions for Protection",
+      "section": "Intellectual Property Considerations",
+      "priority": "normal",
+      "required": false,
+      "options": ["United States", "European Union", "United Kingdom", "China", "Japan", "South Korea", "India", "Canada", "Australia", "Brazil", "Patent Cooperation Treaty (PCT)", "Other", "Worldwide"]
+    },
+    {
+      "type": "radio",
+      "label": "Is there urgency for filing?",
+      "section": "Intellectual Property Considerations",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes - Immediate (within 1 month)", "Yes - Soon (1-3 months)", "Moderate (3-6 months)", "No immediate urgency"]
+    },
+    {
+      "type": "textarea",
+      "label": "Reason for Urgency",
+      "section": "Intellectual Property Considerations",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Are there any related patent applications?",
+      "section": "Intellectual Property Considerations",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "textarea",
+      "label": "Related Application Details",
+      "section": "Intellectual Property Considerations",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Was work done under contract or grant?",
+      "section": "Collaboration & Funding",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No", "Partially"]
+    },
+    {
+      "type": "textarea",
+      "label": "Funding Source Details",
+      "section": "Collaboration & Funding",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Are there any contractual obligations affecting IP rights?",
+      "section": "Collaboration & Funding",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No", "Unsure"]
+    },
+    {
+      "type": "textarea",
+      "label": "Description of Contractual Obligations",
+      "section": "Collaboration & Funding",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Third Party Collaborators or Contributors",
+      "section": "Collaboration & Funding",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Has the invention been publicly disclosed?",
+      "section": "Publications & Disclosures",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No", "Pending"]
+    },
+    {
+      "type": "textarea",
+      "label": "Details of Public Disclosure",
+      "section": "Publications & Disclosures",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date of First Public Disclosure",
+      "section": "Publications & Disclosures",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "checkbox",
+      "label": "Type of Disclosure",
+      "section": "Publications & Disclosures",
+      "priority": "normal",
+      "required": false,
+      "options": ["Journal Publication", "Conference Presentation", "Thesis/Dissertation", "Poster", "Website", "Trade Show", "Product Launch", "Press Release", "Social Media", "Other"]
+    },
+    {
+      "type": "radio",
+      "label": "Are publications planned?",
+      "section": "Publications & Disclosures",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No", "Maybe"]
+    },
+    {
+      "type": "date",
+      "label": "Planned Publication Date",
+      "section": "Publications & Disclosures",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Confidentiality Measures Taken",
+      "section": "Publications & Disclosures",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "List of Supporting Documents",
+      "section": "Supporting Documentation",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Laboratory Notebooks or Records",
+      "section": "Supporting Documentation",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Drawings, Diagrams, or Figures",
+      "section": "Supporting Documentation",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Experimental Data or Results",
+      "section": "Supporting Documentation",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Additional Comments or Information",
+      "section": "Supporting Documentation",
+      "priority": "normal",
+      "required": false
+    }
+  ]
+}
