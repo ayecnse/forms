@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AyeCNSe Forms - AI-First Interface Specification Builder</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+            min-height: 100vh;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 0;
+            animation: slideIn 1s ease-out;
+        }
+
+        .logo {
+            font-size: 4em;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ffd700, #ffed4e, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .tagline {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .description {
+            font-size: 1.2em;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .highlight {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s;
+            animation: slideIn 1s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .feature-card:nth-child(1) { animation-delay: 0.2s; }
+        .feature-card:nth-child(2) { animation-delay: 0.4s; }
+        .feature-card:nth-child(3) { animation-delay: 0.6s; }
+        .feature-card:nth-child(4) { animation-delay: 0.8s; }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .feature-title {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .feature-desc {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .projects-section {
+            margin: 80px 0;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ffd700, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: scale(1.05);
+        }
+
+        .project-name {
+            font-size: 1.4em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+
+        .project-desc {
+            margin-bottom: 15px;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+
+        .project-link {
+            color: #6ee7b7;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .project-link:hover {
+            color: #34d399;
+            text-decoration: underline;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(245, 87, 108, 0.6);
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            box-shadow: 0 10px 30px rgba(79, 172, 254, 0.4);
+        }
+
+        .btn-success:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(79, 172, 254, 0.6);
+        }
+
+        .countdown {
+            margin-top: 40px;
+            font-size: 1.3em;
+            opacity: 0.8;
+        }
+
+        .countdown-timer {
+            font-size: 2em;
+            font-weight: 700;
+            color: #ffd700;
+            margin: 10px 0;
+        }
+
+        .social-section {
+            text-align: center;
+            margin: 60px 0;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .license-footer {
+            text-align: center;
+            padding: 40px;
+            opacity: 0.8;
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5em;
+            }
+
+            .tagline {
+                font-size: 1.3em;
+            }
+
+            .description {
+                font-size: 1em;
+            }
+
+            .btn {
+                padding: 15px 30px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+
+    <div class="container">
+        <div class="hero">
+            <div class="logo">AyeCNSe Forms</div>
+            <div class="tagline">AI-First Browser-Based Interface Specification Builder</div>
+            <div class="description">
+                Build powerful, declarative interface specifications through 
+                <span class="highlight">conversational AI</span>. 
+                Design forms, control panels, and human-machine interfaces without writing code. 
+                Let <span class="highlight">Claude AI</span> understand your needs and generate 
+                production-ready specifications instantly.
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <div class="feature-title">AI-Powered Design</div>
+                <div class="feature-desc">
+                    Describe your interface in natural language. Claude AI creates the complete specification through voice or text conversation.
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <div class="feature-title">Manual Builder</div>
+                <div class="feature-desc">
+                    Prefer hands-on control? Use the visual editor to design forms field by field with full customization.
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">💬</div>
+                <div class="feature-title">Conversational Fill</div>
+                <div class="feature-desc">
+                    Let users fill forms by talking to Claude AI. Natural conversations generate structured data automatically.
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <div class="feature-title">Privacy First</div>
+                <div class="feature-desc">
+                    No backend, no APIs, no tracking. Everything runs in your browser. Your data never leaves your device.
+                </div>
+            </div>
+        </div>
+
+        <div class="projects-section">
+            <h2 class="section-title">The AyeAI Triad</h2>
+            
+            <div style="text-align: center; font-size: 1.3em; line-height: 1.8; margin-bottom: 50px; padding: 0 40px;">
+                <p style="font-style: italic; opacity: 0.95;">
+                    "To see life is not to observe pixels, signals, or data.<br>
+                    It is to remain coherent while sensing, thinking, and acting in the world."
+                </p>
+            </div>
+
+            <div class="project-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-bottom: 50px;">
+                <div class="project-card" style="border: 3px solid #ffd700;">
+                    <div class="project-name">AyeAI</div>
+                    <div class="project-desc">
+                        Cognition, reasoning, learning. Models of the world and of the self.
+                    </div>
+                    <a href="https://ayeai.xyz" class="project-link" target="_blank">ayeai.xyz →</a>
+                </div>
+
+                <div class="project-card" style="border: 3px solid #6ee7b7;">
+                    <div class="project-name">AyeCNSe</div>
+                    <div class="project-desc">
+                        The nervous system. Timing, sensing, coherence, and transport. Where robots, systems, and humans connect.
+                    </div>
+                    <a href="https://ayecnse.net" class="project-link" target="_blank">ayecnse.net →</a>
+                </div>
+
+                <div class="project-card" style="border: 3px solid #f093fb;">
+                    <div class="project-name">AyeAM</div>
+                    <div class="project-desc">
+                        Embodiment. Action in the physical and simulated world.
+                    </div>
+                    <a href="https://ayeam.org" class="project-link" target="_blank">ayeam.org →</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; font-size: 1.2em; line-height: 1.8; margin: 40px 0; padding: 30px; background: rgba(255,215,0,0.1); border-radius: 12px;">
+                <p><strong>Remove any one element and intelligence collapses.</strong></p>
+                <p style="margin-top: 15px;">Together, they form a living loop — not to think alone, but to <em>see</em>, <em>act</em>, and <em>remain alive to meaning</em>.</p>
+            </div>
+
+            <h2 class="section-title" style="margin-top: 60px;">The Foundation</h2>
+            
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-name">Project Hindawi</div>
+                    <div class="project-desc">
+                        Programming in Your Mother Tongue. मातृभाषा में प्रोग्रामिंग. Open-source systems programming from assembly to functional languages in Hindi, Bangla, Gujarati, and other Indian languages.
+                    </div>
+                    <a href="https://hindawi.in" class="project-link" target="_blank">hindawi.in →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-name">Project ILM</div>
+                    <div class="project-desc">
+                        Integrative Linguistic Multiscript. Breaking language barriers through unified multiscript technology.
+                    </div>
+                    <a href="https://ilm.codes" class="project-link" target="_blank">ilm.codes →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-name">Project VIKRAM</div>
+                    <div class="project-desc">
+                        Language neutrality across technical domains. Ushering in true freedom through mother tongue computing with Project Hindawi.
+                    </div>
+                    <a href="https://hindawi.in" class="project-link" target="_blank">Learn More →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-name">TWISHA</div>
+                    <div class="project-desc">
+                        The Women in Self Health Awareness. Empowering women through health technology and inclusive AI.
+                    </div>
+                    <a href="https://ayeai.xyz" class="project-link" target="_blank">Learn More →</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; font-size: 1.2em; line-height: 1.8; margin-top: 50px;">
+                <p><span class="highlight">AyeCNSe Forms</span> is the interface layer that makes these visions accessible.</p>
+                <p style="margin-top: 15px;">A nervous system for Earth — FOSS, language-neutral, human-centered.</p>
+            </div>
+        </div>
+
+        <div class="social-section">
+            <h2 class="section-title">Join the Community</h2>
+            <p style="font-size: 1.2em; margin-bottom: 20px;">
+                Follow these projects on LinkedIn and contribute on GitHub
+            </p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/%E0%A4%B9%E0%A4%BF%E0%A4%82%E0%A4%A6%E0%A4%B5%E0%A5%80" class="social-link" target="_blank">
+                    <span>🔗</span> Hindawi on LinkedIn
+                </a>
+                <a href="https://www.facebook.com/Hindawi-Programming-System-196804757588931" class="social-link" target="_blank">
+                    <span>📘</span> Hindawi on Facebook
+                </a>
+                <a href="https://github.com/hindawiai" class="social-link" target="_blank">
+                    <span>💻</span> Hindawi on GitHub
+                </a>
+                <a href="https://github.com/ayecnse" class="social-link" target="_blank">
+                    <span>💻</span> AyeCNSe on GitHub
+                </a>
+            </div>
+            <p style="margin-top: 40px; font-size: 1.1em;">
+                <strong>Contribute:</strong> Fork the repos, submit pull requests, share ideas. 
+                Open source collaboration makes these projects stronger.
+            </p>
+            <p style="margin-top: 20px; font-size: 1em; opacity: 0.9;">
+                True freedom can only be achieved in the most creative states of mind.<br>
+                The mind is most creative when free to work with the mother tongue.
+            </p>
+        </div>
+
+        <div class="cta-section">
+            <h2 class="section-title">Support AyeCNSe Forms</h2>
+            <p style="font-size: 1.2em; margin-bottom: 30px;">
+                Help us build the future of human-AI interface design
+            </p>
+            <div class="btn-group">
+                <a href="ayecnse-forms.html" class="btn btn-primary">Launch App Now</a>
+                
+                <!-- PLACEHOLDER: Replace # with your Razorpay payment page link -->
+                <a href="#" class="btn btn-secondary" id="supportBtn">
+                    ❤️ Support via Razorpay
+                </a>
+                
+                <a href="https://github.com/ayecnse/ayecnse-forms" class="btn btn-success" target="_blank">
+                    ⭐ Star on GitHub
+                </a>
+            </div>
+
+            <div class="countdown">
+                <div>Auto-launching in:</div>
+                <div class="countdown-timer" id="countdown">60</div>
+                <div>seconds</div>
+            </div>
+        </div>
+
+        <div class="license-footer">
+            <p style="font-size: 1.2em; font-weight: 600; margin-bottom: 15px;">
+                AyeCNSe Forms
+            </p>
+            <p style="margin-bottom: 10px;">
+                GPL v2 License | Copyright 2026 Abhishek Choudhary
+            </p>
+            <p style="font-size: 0.9em; opacity: 0.8; margin-bottom: 15px;">
+                Free and open source. Use it, modify it, share it, improve it.
+            </p>
+            <p style="font-size: 1em; margin-top: 20px;">
+                <strong>AyeCNSe · FOSS · CNS for Earth</strong>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Create starfield
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            starsContainer.appendChild(star);
+        }
+
+        // Countdown timer
+        let seconds = 60;
+        const countdownElement = document.getElementById('countdown');
+        
+        const countdownInterval = setInterval(() => {
+            seconds--;
+            countdownElement.textContent = seconds;
+            
+            if (seconds <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = 'ayecnse-forms.html';
+            }
+        }, 1000);
+
+        // Support button placeholder alert
+        document.getElementById('supportBtn').addEventListener('click', function(e) {
+            if (this.getAttribute('href') === '#') {
+                e.preventDefault();
+                alert('Payment integration coming soon!\n\nTo enable Razorpay support:\n1. Create a Razorpay payment page\n2. Replace the # in the Support button href with your payment page URL\n\nThank you for your interest in supporting AyeCNSe Forms!');
+            }
+        });
+
+        // Skip countdown on any interaction
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('btn-primary')) {
+                clearInterval(countdownInterval);
+            }
+        });
+    </script>
+</body>
+</html>
