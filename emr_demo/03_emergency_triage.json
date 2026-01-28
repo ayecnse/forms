@@ -1,0 +1,350 @@
+{
+  "formTitle": "Emergency Department Triage Form",
+  "formId": "FORM-003",
+  "category": "Emergency",
+  "sections": ["Patient Identification", "Arrival Information", "Vital Signs", "Chief Complaint", "Pain Assessment", "Triage Assessment", "Initial Actions"],
+  "fields": [
+    {
+      "type": "text",
+      "label": "Patient ID",
+      "section": "Patient Identification",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Patient Name",
+      "section": "Patient Identification",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date of Birth",
+      "section": "Patient Identification",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Gender",
+      "section": "Patient Identification",
+      "priority": "normal",
+      "required": false,
+      "options": ["Male", "Female", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Age",
+      "section": "Patient Identification",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Registration Number",
+      "section": "Patient Identification",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Arrival Date",
+      "section": "Arrival Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Arrival Time",
+      "section": "Arrival Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Mode of Arrival",
+      "section": "Arrival Information",
+      "priority": "critical",
+      "required": false,
+      "options": ["Walk-in", "Ambulance - EMS", "Ambulance - Private", "Police Vehicle", "Private Vehicle", "Wheelchair", "Stretcher", "Helicopter", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Accompanied By",
+      "section": "Arrival Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Patient Status on Arrival",
+      "section": "Arrival Information",
+      "priority": "critical",
+      "required": false,
+      "options": ["Conscious", "Unconscious", "Semi-Conscious", "Confused", "Agitated"]
+    },
+    {
+      "type": "number",
+      "label": "Blood Pressure - Systolic (mmHg)",
+      "section": "Vital Signs",
+      "priority": "critical",
+      "required": false,
+      "min": 50,
+      "max": 300
+    },
+    {
+      "type": "number",
+      "label": "Blood Pressure - Diastolic (mmHg)",
+      "section": "Vital Signs",
+      "priority": "critical",
+      "required": false,
+      "min": 30,
+      "max": 200
+    },
+    {
+      "type": "number",
+      "label": "Heart Rate (bpm)",
+      "section": "Vital Signs",
+      "priority": "critical",
+      "required": false,
+      "min": 30,
+      "max": 300
+    },
+    {
+      "type": "number",
+      "label": "Respiratory Rate (breaths/min)",
+      "section": "Vital Signs",
+      "priority": "critical",
+      "required": false,
+      "min": 5,
+      "max": 100
+    },
+    {
+      "type": "number",
+      "label": "Temperature (°F)",
+      "section": "Vital Signs",
+      "priority": "critical",
+      "required": false,
+      "min": 90,
+      "max": 110
+    },
+    {
+      "type": "number",
+      "label": "Oxygen Saturation - SpO2 (%)",
+      "section": "Vital Signs",
+      "priority": "critical",
+      "required": false,
+      "min": 50,
+      "max": 100
+    },
+    {
+      "type": "dropdown",
+      "label": "Glasgow Coma Scale (GCS)",
+      "section": "Vital Signs",
+      "priority": "critical",
+      "required": false,
+      "options": ["15 - Alert", "14", "13", "12", "11", "10", "9", "8", "7", "6", "5", "4", "3 - Unresponsive", "Not Assessed"]
+    },
+    {
+      "type": "text",
+      "label": "Weight (kg)",
+      "section": "Vital Signs",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Blood Glucose (mg/dL)",
+      "section": "Vital Signs",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Chief Complaint",
+      "section": "Chief Complaint",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "History of Present Illness",
+      "section": "Chief Complaint",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Time of Symptom Onset",
+      "section": "Chief Complaint",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Relevant Medical History",
+      "section": "Chief Complaint",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Current Medications",
+      "section": "Chief Complaint",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Known Allergies",
+      "section": "Chief Complaint",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Last Tetanus Shot",
+      "section": "Chief Complaint",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Is Patient in Pain?",
+      "section": "Pain Assessment",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No", "Unable to Assess"]
+    },
+    {
+      "type": "number",
+      "label": "Pain Scale (0-10)",
+      "section": "Pain Assessment",
+      "priority": "critical",
+      "required": false,
+      "min": 0,
+      "max": 10
+    },
+    {
+      "type": "text",
+      "label": "Pain Location",
+      "section": "Pain Assessment",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Pain Characteristics",
+      "section": "Pain Assessment",
+      "priority": "normal",
+      "required": false,
+      "options": ["Sharp", "Dull", "Burning", "Throbbing", "Stabbing", "Cramping", "Radiating", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Pain Duration",
+      "section": "Pain Assessment",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Triage Category (ESI Level)",
+      "section": "Triage Assessment",
+      "priority": "critical",
+      "required": false,
+      "options": ["Level 1 - Resuscitation (Immediate)", "Level 2 - Emergent (10 minutes)", "Level 3 - Urgent (30 minutes)", "Level 4 - Less Urgent (60 minutes)", "Level 5 - Non-Urgent (120 minutes)"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Mental Status",
+      "section": "Triage Assessment",
+      "priority": "critical",
+      "required": false,
+      "options": ["Alert & Oriented", "Alert & Confused", "Drowsy", "Lethargic", "Unresponsive", "Agitated", "Combative"]
+    },
+    {
+      "type": "checkbox",
+      "label": "Presenting Symptoms",
+      "section": "Triage Assessment",
+      "priority": "normal",
+      "required": false,
+      "options": ["Chest Pain", "Shortness of Breath", "Abdominal Pain", "Trauma/Injury", "Bleeding", "Fever", "Altered Mental Status", "Seizure", "Stroke Symptoms", "Poisoning/Overdose", "Allergic Reaction", "Other"]
+    },
+    {
+      "type": "radio",
+      "label": "Airway Status",
+      "section": "Triage Assessment",
+      "priority": "critical",
+      "required": false,
+      "options": ["Patent", "Compromised", "Obstructed"]
+    },
+    {
+      "type": "radio",
+      "label": "Breathing Status",
+      "section": "Triage Assessment",
+      "priority": "critical",
+      "required": false,
+      "options": ["Normal", "Labored", "Shallow", "Irregular", "Absent"]
+    },
+    {
+      "type": "radio",
+      "label": "Circulation Status",
+      "section": "Triage Assessment",
+      "priority": "critical",
+      "required": false,
+      "options": ["Normal", "Weak Pulse", "Irregular Pulse", "No Pulse Detected"]
+    },
+    {
+      "type": "textarea",
+      "label": "Assessment Notes",
+      "section": "Triage Assessment",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "checkbox",
+      "label": "Immediate Interventions Initiated",
+      "section": "Initial Actions",
+      "priority": "critical",
+      "required": false,
+      "options": ["Oxygen Therapy", "IV Access Established", "Cardiac Monitor", "Pain Management", "Wound Care", "Splinting", "Isolation Precautions", "Trauma Team Activation", "Code Blue", "Stroke Alert", "STEMI Alert", "None"]
+    },
+    {
+      "type": "text",
+      "label": "Assigned to Physician",
+      "section": "Initial Actions",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Room/Bay Number",
+      "section": "Initial Actions",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Triage Nurse Name",
+      "section": "Initial Actions",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Triage Nurse ID",
+      "section": "Initial Actions",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Triage Completion Time",
+      "section": "Initial Actions",
+      "priority": "critical",
+      "required": false
+    }
+  ]
+}

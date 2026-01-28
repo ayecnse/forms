@@ -1,0 +1,270 @@
+{
+  "formTitle": "Patient Registration Form",
+  "formId": "FORM-001",
+  "category": "Registration",
+  "sections": ["Personal Information", "Contact Details", "Emergency Contact", "Insurance Information", "Medical History Summary"],
+  "fields": [
+    {
+      "type": "text",
+      "label": "Patient ID",
+      "section": "Personal Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "First Name",
+      "section": "Personal Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Middle Name",
+      "section": "Personal Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Last Name",
+      "section": "Personal Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date of Birth",
+      "section": "Personal Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Gender",
+      "section": "Personal Information",
+      "priority": "normal",
+      "required": false,
+      "options": ["Male", "Female", "Other", "Prefer not to say"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Blood Group",
+      "section": "Personal Information",
+      "priority": "critical",
+      "required": false,
+      "options": ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-", "Unknown"]
+    },
+    {
+      "type": "text",
+      "label": "Nationality",
+      "section": "Personal Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "National ID/SSN",
+      "section": "Personal Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Marital Status",
+      "section": "Personal Information",
+      "priority": "optional",
+      "required": false,
+      "options": ["Single", "Married", "Divorced", "Widowed", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Occupation",
+      "section": "Personal Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Address Line 1",
+      "section": "Contact Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Address Line 2",
+      "section": "Contact Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "City",
+      "section": "Contact Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "State/Province",
+      "section": "Contact Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "ZIP/Postal Code",
+      "section": "Contact Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Country",
+      "section": "Contact Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Primary Phone Number",
+      "section": "Contact Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Alternate Phone Number",
+      "section": "Contact Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Email Address",
+      "section": "Contact Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Emergency Contact Name",
+      "section": "Emergency Contact",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Relationship to Patient",
+      "section": "Emergency Contact",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Emergency Contact Phone",
+      "section": "Emergency Contact",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Emergency Contact Address",
+      "section": "Emergency Contact",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Secondary Emergency Contact Name",
+      "section": "Emergency Contact",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Secondary Emergency Contact Phone",
+      "section": "Emergency Contact",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Insurance Provider",
+      "section": "Insurance Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Policy Number",
+      "section": "Insurance Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Group Number",
+      "section": "Insurance Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Policy Expiry Date",
+      "section": "Insurance Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Policyholder Name",
+      "section": "Insurance Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Relationship to Policyholder",
+      "section": "Insurance Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Known Allergies",
+      "section": "Medical History Summary",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Chronic Conditions",
+      "section": "Medical History Summary",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Current Medications",
+      "section": "Medical History Summary",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Previous Surgeries",
+      "section": "Medical History Summary",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Family Medical History",
+      "section": "Medical History Summary",
+      "priority": "optional",
+      "required": false
+    }
+  ]
+}

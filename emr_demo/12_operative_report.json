@@ -1,0 +1,487 @@
+{
+  "formTitle": "Operative Report Form",
+  "formId": "FORM-012",
+  "category": "Surgery",
+  "sections": ["Patient & Procedure Information", "Pre-Operative Diagnosis", "Post-Operative Diagnosis", "Procedure Performed", "Surgical Team", "Anesthesia Details", "Operative Findings", "Procedure Description", "Specimens", "Complications", "Post-Operative Plan"],
+  "fields": [
+    {
+      "type": "text",
+      "label": "Operative Report Number",
+      "section": "Patient & Procedure Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Patient ID",
+      "section": "Patient & Procedure Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Patient Name",
+      "section": "Patient & Procedure Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Age/Gender",
+      "section": "Patient & Procedure Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Hospital/Admission Number",
+      "section": "Patient & Procedure Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date of Surgery",
+      "section": "Patient & Procedure Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Start Time",
+      "section": "Patient & Procedure Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "End Time",
+      "section": "Patient & Procedure Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Total Duration",
+      "section": "Patient & Procedure Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Operating Room Number",
+      "section": "Patient & Procedure Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Pre-Operative Diagnosis",
+      "section": "Pre-Operative Diagnosis",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "ICD-10 Code",
+      "section": "Pre-Operative Diagnosis",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Post-Operative Diagnosis",
+      "section": "Post-Operative Diagnosis",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "ICD-10 Code",
+      "section": "Post-Operative Diagnosis",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Name of Procedure(s) Performed",
+      "section": "Procedure Performed",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Procedure Code(s) (CPT/ICD-10-PCS)",
+      "section": "Procedure Performed",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Type of Surgery",
+      "section": "Procedure Performed",
+      "priority": "normal",
+      "required": false,
+      "options": ["Elective", "Emergency", "Urgent", "Diagnostic", "Therapeutic", "Reconstructive", "Palliative"]
+    },
+    {
+      "type": "text",
+      "label": "Surgical Approach",
+      "section": "Procedure Performed",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Surgeon (Primary)",
+      "section": "Surgical Team",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Surgeon Registration Number",
+      "section": "Surgical Team",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Assistant Surgeon(s)",
+      "section": "Surgical Team",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Surgical Resident(s)",
+      "section": "Surgical Team",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Scrub Nurse",
+      "section": "Surgical Team",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Circulating Nurse",
+      "section": "Surgical Team",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Anesthesiologist",
+      "section": "Anesthesia Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Type of Anesthesia",
+      "section": "Anesthesia Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["General Anesthesia", "Spinal Anesthesia", "Epidural Anesthesia", "Regional Block", "Local Anesthesia", "MAC (Monitored Anesthesia Care)", "Combined"]
+    },
+    {
+      "type": "textarea",
+      "label": "Anesthesia Details",
+      "section": "Anesthesia Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "ASA Physical Status Classification",
+      "section": "Anesthesia Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Intra-Operative Findings",
+      "section": "Operative Findings",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Anatomical Variations (if any)",
+      "section": "Operative Findings",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Pathological Findings",
+      "section": "Operative Findings",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Detailed Description of Procedure",
+      "section": "Procedure Description",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Surgical Technique Used",
+      "section": "Procedure Description",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Position of Patient",
+      "section": "Procedure Description",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Preparation & Draping",
+      "section": "Procedure Description",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Incision Details",
+      "section": "Procedure Description",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Closure Technique",
+      "section": "Procedure Description",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Suture Material Used",
+      "section": "Procedure Description",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Drains Placed?",
+      "section": "Procedure Description",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "textarea",
+      "label": "Drain Details (Type, Location, Size)",
+      "section": "Procedure Description",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Dressing Applied",
+      "section": "Procedure Description",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Estimated Blood Loss (mL)",
+      "section": "Procedure Description",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Total Fluid Input (mL)",
+      "section": "Procedure Description",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Urine Output (mL)",
+      "section": "Procedure Description",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Blood Transfusion Given?",
+      "section": "Procedure Description",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "textarea",
+      "label": "Transfusion Details (Units, Type)",
+      "section": "Procedure Description",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Specimens Sent for Examination?",
+      "section": "Specimens",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "textarea",
+      "label": "Specimen Description",
+      "section": "Specimens",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Specimen Sent To",
+      "section": "Specimens",
+      "priority": "optional",
+      "required": false,
+      "options": ["Histopathology", "Cytology", "Microbiology", "Frozen Section", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Specimen Container Number",
+      "section": "Specimens",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Complications During Surgery?",
+      "section": "Complications",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "textarea",
+      "label": "Description of Complications",
+      "section": "Complications",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Management of Complications",
+      "section": "Complications",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Unexpected Events?",
+      "section": "Complications",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "textarea",
+      "label": "Description of Unexpected Events",
+      "section": "Complications",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Patient Condition at End of Surgery",
+      "section": "Post-Operative Plan",
+      "priority": "critical",
+      "required": false,
+      "options": ["Stable", "Critical", "Guarded", "Fair", "Good"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Patient Transferred To",
+      "section": "Post-Operative Plan",
+      "priority": "critical",
+      "required": false,
+      "options": ["Recovery Room/PACU", "ICU", "Ward", "Other"]
+    },
+    {
+      "type": "textarea",
+      "label": "Post-Operative Orders",
+      "section": "Post-Operative Plan",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Post-Operative Medications",
+      "section": "Post-Operative Plan",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Post-Operative Care Instructions",
+      "section": "Post-Operative Plan",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Diet Instructions",
+      "section": "Post-Operative Plan",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Activity Restrictions",
+      "section": "Post-Operative Plan",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Follow-up Plan",
+      "section": "Post-Operative Plan",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Additional Notes/Comments",
+      "section": "Post-Operative Plan",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Surgeon Signature",
+      "section": "Post-Operative Plan",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date Report Completed",
+      "section": "Post-Operative Plan",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Time Report Completed",
+      "section": "Post-Operative Plan",
+      "priority": "optional",
+      "required": false
+    }
+  ]
+}

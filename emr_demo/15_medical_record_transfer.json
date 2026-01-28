@@ -1,0 +1,298 @@
+{
+  "formTitle": "Medical Record Transfer Request Form",
+  "formId": "FORM-015",
+  "category": "Medical Records",
+  "sections": ["Patient Information", "Requestor Information", "Records Requested", "Destination Information", "Authorization"],
+  "fields": [
+    {
+      "type": "text",
+      "label": "Request Number",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Request Date",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Patient ID",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Patient Name",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date of Birth",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Contact Number",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Address",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Requestor Type",
+      "section": "Requestor Information",
+      "priority": "critical",
+      "required": false,
+      "options": ["Patient (Self)", "Legal Guardian", "Attorney", "Insurance Company", "Another Healthcare Provider", "Government Agency", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Requestor Name",
+      "section": "Requestor Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Relationship to Patient",
+      "section": "Requestor Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Organization/Agency",
+      "section": "Requestor Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Contact Number",
+      "section": "Requestor Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Email Address",
+      "section": "Requestor Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Mailing Address",
+      "section": "Requestor Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Purpose of Request",
+      "section": "Records Requested",
+      "priority": "critical",
+      "required": false,
+      "options": ["Continuing Care", "Transfer to Another Provider", "Insurance Claim", "Legal Proceedings", "Personal Use", "Research", "Disability Claim", "Other"]
+    },
+    {
+      "type": "textarea",
+      "label": "Specific Purpose Details",
+      "section": "Records Requested",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date Range - From",
+      "section": "Records Requested",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date Range - To",
+      "section": "Records Requested",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "checkbox",
+      "label": "Types of Records Requested",
+      "section": "Records Requested",
+      "priority": "critical",
+      "required": false,
+      "options": ["Complete Medical Record", "Consultation Notes", "Discharge Summary", "Laboratory Results", "Radiology Reports/Images", "Pathology Reports", "Operative Reports", "Progress Notes", "Medication Records", "Immunization Records", "Billing/Financial Records", "Other"]
+    },
+    {
+      "type": "textarea",
+      "label": "Specific Records/Documents Needed",
+      "section": "Records Requested",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Format Requested",
+      "section": "Records Requested",
+      "priority": "normal",
+      "required": false,
+      "options": ["Paper Copies", "Electronic/CD", "Secure Email", "Fax", "Portal Access"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Delivery Method",
+      "section": "Destination Information",
+      "priority": "critical",
+      "required": false,
+      "options": ["Mail", "Courier", "Patient Pick-up", "Electronic Transfer", "Fax", "Direct to Provider"]
+    },
+    {
+      "type": "text",
+      "label": "Recipient Name",
+      "section": "Destination Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Facility/Organization Name",
+      "section": "Destination Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Delivery Address",
+      "section": "Destination Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Fax Number (if applicable)",
+      "section": "Destination Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Email Address (if applicable)",
+      "section": "Destination Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Attention To",
+      "section": "Destination Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Rush/Urgent Request?",
+      "section": "Destination Information",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "textarea",
+      "label": "Reason for Urgency",
+      "section": "Destination Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "display",
+      "label": "Authorization Statement",
+      "section": "Authorization",
+      "priority": "critical",
+      "required": false,
+      "displayValue": "I authorize the release of my medical records as specified above. I understand that this information may contain sensitive health information."
+    },
+    {
+      "type": "radio",
+      "label": "I authorize release of records containing:",
+      "section": "Authorization",
+      "priority": "critical",
+      "required": false,
+      "options": ["All Information", "All Except HIV/AIDS", "All Except Mental Health", "All Except Substance Abuse", "Specific Records Only (as listed above)"]
+    },
+    {
+      "type": "radio",
+      "label": "I understand this authorization is voluntary",
+      "section": "Authorization",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "radio",
+      "label": "I understand I may revoke this authorization",
+      "section": "Authorization",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "date",
+      "label": "Authorization Expiration Date",
+      "section": "Authorization",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Patient/Authorized Person Signature",
+      "section": "Authorization",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date Signed",
+      "section": "Authorization",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Witness Name (if required)",
+      "section": "Authorization",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Witness Signature (if required)",
+      "section": "Authorization",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Additional Comments/Instructions",
+      "section": "Authorization",
+      "priority": "optional",
+      "required": false
+    }
+  ]
+}

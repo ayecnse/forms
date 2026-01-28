@@ -1,0 +1,379 @@
+{
+  "formTitle": "Radiology & Imaging Request Form",
+  "formId": "FORM-006",
+  "category": "Diagnostics",
+  "sections": ["Patient Information", "Requesting Physician", "Examination Details", "Clinical Information", "Contrast & Safety"],
+  "fields": [
+    {
+      "type": "text",
+      "label": "Imaging Request ID",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Patient ID",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Patient Name",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date of Birth",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Age",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Gender",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false,
+      "options": ["Male", "Female", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Weight (kg)",
+      "section": "Patient Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Height (cm)",
+      "section": "Patient Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Ward/Department",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Bed Number",
+      "section": "Patient Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Patient Type",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false,
+      "options": ["Inpatient", "Outpatient", "Emergency", "ICU"]
+    },
+    {
+      "type": "text",
+      "label": "Contact Number",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Requesting Physician Name",
+      "section": "Requesting Physician",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Physician ID",
+      "section": "Requesting Physician",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Department/Specialty",
+      "section": "Requesting Physician",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Contact Number",
+      "section": "Requesting Physician",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Email Address",
+      "section": "Requesting Physician",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Request Date",
+      "section": "Examination Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Request Time",
+      "section": "Examination Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Examination Priority",
+      "section": "Examination Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Routine", "Urgent", "Emergency/STAT", "Scheduled", "Pre-Operative"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Modality Type",
+      "section": "Examination Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["X-Ray", "CT Scan", "MRI", "Ultrasound", "Doppler", "Mammography", "Fluoroscopy", "PET Scan", "Nuclear Medicine", "Bone Scan", "DEXA Scan", "Angiography", "Interventional Radiology", "Other"]
+    },
+    {
+      "type": "checkbox",
+      "label": "X-Ray Examinations",
+      "section": "Examination Details",
+      "priority": "normal",
+      "required": false,
+      "options": ["Chest X-Ray (PA/Lateral)", "Abdomen X-Ray", "Skull X-Ray", "Spine X-Ray (Cervical/Thoracic/Lumbar)", "Pelvis X-Ray", "Upper Limb X-Ray", "Lower Limb X-Ray", "Hand/Wrist X-Ray", "Foot/Ankle X-Ray", "Shoulder X-Ray", "Hip X-Ray", "Knee X-Ray", "KUB (Kidney, Ureter, Bladder)", "Other"]
+    },
+    {
+      "type": "checkbox",
+      "label": "CT Scan Examinations",
+      "section": "Examination Details",
+      "priority": "normal",
+      "required": false,
+      "options": ["CT Brain", "CT Chest", "CT Abdomen", "CT Pelvis", "CT Abdomen & Pelvis", "CT Spine (Cervical/Thoracic/Lumbar)", "CT Angiography", "CT Pulmonary Angiogram (CTPA)", "CT Coronary Angiography", "CT KUB", "CT Sinuses", "CT Neck", "CT Extremities", "Other"]
+    },
+    {
+      "type": "checkbox",
+      "label": "MRI Examinations",
+      "section": "Examination Details",
+      "priority": "normal",
+      "required": false,
+      "options": ["MRI Brain", "MRI Spine (Cervical/Thoracic/Lumbar)", "MRI Abdomen", "MRI Pelvis", "MRI Chest", "MRI Shoulder", "MRI Knee", "MRI Hip", "MRI Ankle", "MRI Wrist", "MRI Angiography (MRA)", "MRCP (Cholangiopancreatography)", "MR Enterography", "Cardiac MRI", "Functional MRI", "Other"]
+    },
+    {
+      "type": "checkbox",
+      "label": "Ultrasound Examinations",
+      "section": "Examination Details",
+      "priority": "normal",
+      "required": false,
+      "options": ["Abdominal Ultrasound", "Pelvic Ultrasound", "Obstetric Ultrasound", "TVS (Transvaginal Sonography)", "Renal/KUB Ultrasound", "Scrotal Ultrasound", "Thyroid Ultrasound", "Breast Ultrasound", "Musculoskeletal Ultrasound", "Carotid Doppler", "DVT Study (Lower Limb Doppler)", "Arterial Doppler", "Echocardiography", "FAST (Focused Assessment with Sonography for Trauma)", "Other"]
+    },
+    {
+      "type": "checkbox",
+      "label": "Specialized Examinations",
+      "section": "Examination Details",
+      "priority": "normal",
+      "required": false,
+      "options": ["Mammography", "Bone Densitometry (DEXA)", "Fluoroscopy", "Barium Swallow", "Barium Meal", "Barium Enema", "HSG (Hysterosalpingography)", "IVP (Intravenous Pyelography)", "Angiography", "Venography", "Myelography", "PET-CT Scan", "Nuclear Medicine Scan", "Bone Scan", "Thyroid Scan", "Renal Scan", "Other"]
+    },
+    {
+      "type": "textarea",
+      "label": "Specific Examination Area/Region",
+      "section": "Examination Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Laterality",
+      "section": "Examination Details",
+      "priority": "optional",
+      "required": false,
+      "options": ["Left", "Right", "Bilateral", "Not Applicable"]
+    },
+    {
+      "type": "textarea",
+      "label": "Special Instructions/Views Required",
+      "section": "Examination Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Clinical Indication/Diagnosis",
+      "section": "Clinical Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Clinical History & Relevant Findings",
+      "section": "Clinical Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Specific Clinical Question",
+      "section": "Clinical Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Previous Relevant Imaging",
+      "section": "Clinical Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Comparison Studies Available",
+      "section": "Clinical Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Is Contrast Required?",
+      "section": "Contrast & Safety",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes - Oral", "Yes - IV", "Yes - Both Oral & IV", "No", "To Be Decided by Radiologist"]
+    },
+    {
+      "type": "radio",
+      "label": "Known Contrast Allergies?",
+      "section": "Contrast & Safety",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No", "Unknown"]
+    },
+    {
+      "type": "textarea",
+      "label": "Allergy Details",
+      "section": "Contrast & Safety",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "History of Renal Impairment?",
+      "section": "Contrast & Safety",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No", "Unknown"]
+    },
+    {
+      "type": "text",
+      "label": "Serum Creatinine Level",
+      "section": "Contrast & Safety",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "eGFR",
+      "section": "Contrast & Safety",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Diabetic Patient?",
+      "section": "Contrast & Safety",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "radio",
+      "label": "On Metformin?",
+      "section": "Contrast & Safety",
+      "priority": "optional",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "radio",
+      "label": "Pregnancy Status (For Female Patients)",
+      "section": "Contrast & Safety",
+      "priority": "critical",
+      "required": false,
+      "options": ["Pregnant", "Possibly Pregnant", "Not Pregnant", "Not Applicable"]
+    },
+    {
+      "type": "date",
+      "label": "Last Menstrual Period (LMP)",
+      "section": "Contrast & Safety",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Breastfeeding?",
+      "section": "Contrast & Safety",
+      "priority": "optional",
+      "required": false,
+      "options": ["Yes", "No", "Not Applicable"]
+    },
+    {
+      "type": "checkbox",
+      "label": "Implants/Devices",
+      "section": "Contrast & Safety",
+      "priority": "critical",
+      "required": false,
+      "options": ["Pacemaker", "ICD (Implantable Cardioverter Defibrillator)", "Cochlear Implant", "Insulin Pump", "Metal Prosthesis", "Surgical Clips/Staples", "Shrapnel", "None", "Other"]
+    },
+    {
+      "type": "radio",
+      "label": "Claustrophobia (For MRI)?",
+      "section": "Contrast & Safety",
+      "priority": "optional",
+      "required": false,
+      "options": ["Yes", "No", "Not Applicable"]
+    },
+    {
+      "type": "textarea",
+      "label": "Additional Safety Concerns",
+      "section": "Contrast & Safety",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Transport Assistance Required?",
+      "section": "Contrast & Safety",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes - Wheelchair", "Yes - Stretcher", "Yes - ICU Transport", "No"]
+    },
+    {
+      "type": "radio",
+      "label": "Report Required By",
+      "section": "Contrast & Safety",
+      "priority": "normal",
+      "required": false,
+      "options": ["Same Day", "24 Hours", "48 Hours", "Routine", "Pre-Op Clearance"]
+    }
+  ]
+}

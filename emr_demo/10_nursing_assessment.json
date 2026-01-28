@@ -1,0 +1,505 @@
+{
+  "formTitle": "Nursing Assessment Form",
+  "formId": "FORM-010",
+  "category": "Nursing",
+  "sections": ["Patient Information", "Vital Signs", "Physical Assessment", "Pain Assessment", "Medication Administration", "Intake & Output", "Nursing Interventions", "Patient Safety"],
+  "fields": [
+    {
+      "type": "text",
+      "label": "Patient ID",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Patient Name",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Age/Gender",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Ward/Room/Bed Number",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Assessment Date",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Assessment Time",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Shift",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false,
+      "options": ["Morning", "Evening", "Night"]
+    },
+    {
+      "type": "text",
+      "label": "Attending Physician",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Diagnosis",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "number",
+      "label": "Blood Pressure - Systolic (mmHg)",
+      "section": "Vital Signs",
+      "priority": "critical",
+      "required": false,
+      "min": 50,
+      "max": 300
+    },
+    {
+      "type": "number",
+      "label": "Blood Pressure - Diastolic (mmHg)",
+      "section": "Vital Signs",
+      "priority": "critical",
+      "required": false,
+      "min": 30,
+      "max": 200
+    },
+    {
+      "type": "number",
+      "label": "Heart Rate (bpm)",
+      "section": "Vital Signs",
+      "priority": "critical",
+      "required": false,
+      "min": 30,
+      "max": 300
+    },
+    {
+      "type": "number",
+      "label": "Respiratory Rate (breaths/min)",
+      "section": "Vital Signs",
+      "priority": "critical",
+      "required": false,
+      "min": 5,
+      "max": 100
+    },
+    {
+      "type": "number",
+      "label": "Temperature (°F)",
+      "section": "Vital Signs",
+      "priority": "critical",
+      "required": false,
+      "min": 90,
+      "max": 110
+    },
+    {
+      "type": "dropdown",
+      "label": "Temperature Route",
+      "section": "Vital Signs",
+      "priority": "optional",
+      "required": false,
+      "options": ["Oral", "Axillary", "Rectal", "Tympanic", "Temporal"]
+    },
+    {
+      "type": "number",
+      "label": "Oxygen Saturation - SpO2 (%)",
+      "section": "Vital Signs",
+      "priority": "critical",
+      "required": false,
+      "min": 50,
+      "max": 100
+    },
+    {
+      "type": "text",
+      "label": "Oxygen Support (L/min)",
+      "section": "Vital Signs",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Oxygen Delivery Method",
+      "section": "Vital Signs",
+      "priority": "optional",
+      "required": false,
+      "options": ["Room Air", "Nasal Cannula", "Face Mask", "Non-Rebreather Mask", "Ventilator", "CPAP/BiPAP", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Blood Glucose (mg/dL)",
+      "section": "Vital Signs",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Weight (kg)",
+      "section": "Vital Signs",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Level of Consciousness",
+      "section": "Physical Assessment",
+      "priority": "critical",
+      "required": false,
+      "options": ["Alert & Oriented x4", "Alert & Oriented x3", "Alert & Oriented x2", "Alert & Oriented x1", "Lethargic", "Obtunded", "Stuporous", "Comatose"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Glasgow Coma Scale (GCS)",
+      "section": "Physical Assessment",
+      "priority": "optional",
+      "required": false,
+      "options": ["15", "14", "13", "12", "11", "10", "9", "8", "7", "6", "5", "4", "3"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Pupil Response",
+      "section": "Physical Assessment",
+      "priority": "optional",
+      "required": false,
+      "options": ["PERRLA (Pupils Equal, Round, Reactive to Light and Accommodation)", "Unequal", "Non-Reactive", "Sluggish", "Dilated", "Constricted"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Skin Condition",
+      "section": "Physical Assessment",
+      "priority": "normal",
+      "required": false,
+      "options": ["Normal", "Warm & Dry", "Cool & Clammy", "Pale", "Flushed", "Cyanotic", "Jaundiced", "Rash", "Bruising", "Edema", "Pressure Ulcer"]
+    },
+    {
+      "type": "textarea",
+      "label": "Skin Integrity/Wounds",
+      "section": "Physical Assessment",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Cardiovascular Assessment",
+      "section": "Physical Assessment",
+      "priority": "normal",
+      "required": false,
+      "options": ["Regular Rate & Rhythm", "Irregular", "Tachycardia", "Bradycardia", "Murmur", "Normal S1/S2", "Peripheral Pulses Present", "Weak Pulses", "Other"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Respiratory Assessment",
+      "section": "Physical Assessment",
+      "priority": "normal",
+      "required": false,
+      "options": ["Clear Bilateral", "Wheezing", "Crackles/Rales", "Rhonchi", "Diminished Sounds", "Dyspnea", "Use of Accessory Muscles", "Cough - Productive", "Cough - Non-Productive", "Other"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Gastrointestinal Assessment",
+      "section": "Physical Assessment",
+      "priority": "normal",
+      "required": false,
+      "options": ["Soft & Non-Tender", "Distended", "Tender", "Rigid", "Bowel Sounds Present", "Bowel Sounds Absent", "Hyperactive", "Nausea", "Vomiting", "Diarrhea", "Constipation", "Other"]
+    },
+    {
+      "type": "date",
+      "label": "Last Bowel Movement",
+      "section": "Physical Assessment",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Genitourinary Assessment",
+      "section": "Physical Assessment",
+      "priority": "normal",
+      "required": false,
+      "options": ["Voiding Independently", "Catheter in Place", "Incontinent", "Urinary Retention", "Hematuria", "Dysuria", "Normal Output", "Decreased Output", "Other"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Musculoskeletal Assessment",
+      "section": "Physical Assessment",
+      "priority": "normal",
+      "required": false,
+      "options": ["Normal Strength & ROM", "Weakness", "Limited ROM", "Joint Swelling", "Contractures", "Fracture", "Immobile", "Ambulatory", "Requires Assistance", "Other"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Neurological Assessment",
+      "section": "Physical Assessment",
+      "priority": "normal",
+      "required": false,
+      "options": ["Alert & Oriented", "Confused", "Drowsy", "Seizure Activity", "Numbness/Tingling", "Motor Deficit", "Sensory Deficit", "Speech Impairment", "Normal", "Other"]
+    },
+    {
+      "type": "radio",
+      "label": "Is Patient in Pain?",
+      "section": "Pain Assessment",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No", "Unable to Assess"]
+    },
+    {
+      "type": "number",
+      "label": "Pain Scale (0-10)",
+      "section": "Pain Assessment",
+      "priority": "critical",
+      "required": false,
+      "min": 0,
+      "max": 10
+    },
+    {
+      "type": "text",
+      "label": "Pain Location",
+      "section": "Pain Assessment",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Pain Characteristics",
+      "section": "Pain Assessment",
+      "priority": "normal",
+      "required": false,
+      "options": ["Sharp", "Dull", "Burning", "Throbbing", "Stabbing", "Cramping", "Aching", "Radiating", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Pain Duration",
+      "section": "Pain Assessment",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Pain Management Interventions",
+      "section": "Pain Assessment",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Medications Administered",
+      "section": "Medication Administration",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "IV Fluids Running",
+      "section": "Medication Administration",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "IV Site Condition",
+      "section": "Medication Administration",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "PRN Medications Given?",
+      "section": "Medication Administration",
+      "priority": "optional",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "textarea",
+      "label": "PRN Details",
+      "section": "Medication Administration",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Medication Allergies Verified",
+      "section": "Medication Administration",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Total Fluid Intake (mL)",
+      "section": "Intake & Output",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Oral Intake (mL)",
+      "section": "Intake & Output",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "IV Intake (mL)",
+      "section": "Intake & Output",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Total Urine Output (mL)",
+      "section": "Intake & Output",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Other Output (Drainage, Emesis, etc.) (mL)",
+      "section": "Intake & Output",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Fluid Balance",
+      "section": "Intake & Output",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Nursing Interventions Performed",
+      "section": "Nursing Interventions",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Wound Care/Dressing Changes",
+      "section": "Nursing Interventions",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Patient/Family Education Provided",
+      "section": "Nursing Interventions",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Response to Treatment/Interventions",
+      "section": "Nursing Interventions",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Communication with Physician",
+      "section": "Nursing Interventions",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Fall Risk Assessment",
+      "section": "Patient Safety",
+      "priority": "critical",
+      "required": false,
+      "options": ["Low Risk", "Moderate Risk", "High Risk"]
+    },
+    {
+      "type": "checkbox",
+      "label": "Fall Prevention Measures",
+      "section": "Patient Safety",
+      "priority": "normal",
+      "required": false,
+      "options": ["Bed in Low Position", "Side Rails Up", "Call Light Within Reach", "Non-Slip Footwear", "Assist with Ambulation", "Bed Alarm", "Frequent Rounding", "None"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Pressure Ulcer Risk",
+      "section": "Patient Safety",
+      "priority": "normal",
+      "required": false,
+      "options": ["Low Risk", "Moderate Risk", "High Risk"]
+    },
+    {
+      "type": "checkbox",
+      "label": "Pressure Ulcer Prevention",
+      "section": "Patient Safety",
+      "priority": "optional",
+      "required": false,
+      "options": ["Repositioning Q2H", "Specialty Mattress", "Heel Protection", "Skin Assessment", "Moisture Barrier", "None"]
+    },
+    {
+      "type": "radio",
+      "label": "Restraints in Use?",
+      "section": "Patient Safety",
+      "priority": "optional",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "textarea",
+      "label": "Restraint Details & Justification",
+      "section": "Patient Safety",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Safety Concerns/Incidents",
+      "section": "Patient Safety",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Additional Notes/Comments",
+      "section": "Patient Safety",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Nurse Name",
+      "section": "Patient Safety",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Nurse ID",
+      "section": "Patient Safety",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Signature",
+      "section": "Patient Safety",
+      "priority": "critical",
+      "required": false
+    }
+  ]
+}

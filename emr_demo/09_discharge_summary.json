@@ -1,0 +1,466 @@
+{
+  "formTitle": "Discharge Summary Form",
+  "formId": "FORM-009",
+  "category": "Discharge",
+  "sections": ["Patient Information", "Admission Details", "Hospital Course", "Diagnosis", "Procedures & Investigations", "Treatment Summary", "Discharge Details", "Follow-up Instructions"],
+  "fields": [
+    {
+      "type": "text",
+      "label": "Discharge Summary Number",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Patient ID",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Admission Number",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Patient Name",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Age/Gender",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Blood Group",
+      "section": "Patient Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Ward/Room Number",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date of Admission",
+      "section": "Admission Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date of Discharge",
+      "section": "Admission Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Length of Stay (Days)",
+      "section": "Admission Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Admitting Physician",
+      "section": "Admission Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Attending Physician",
+      "section": "Admission Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Consulting Physician(s)",
+      "section": "Admission Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Department",
+      "section": "Admission Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Chief Complaints at Admission",
+      "section": "Hospital Course",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "History of Present Illness",
+      "section": "Hospital Course",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Physical Examination Findings on Admission",
+      "section": "Hospital Course",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Vital Signs on Admission",
+      "section": "Hospital Course",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Hospital Course/Clinical Progress",
+      "section": "Hospital Course",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Significant Events During Hospitalization",
+      "section": "Hospital Course",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Complications (if any)",
+      "section": "Hospital Course",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Vital Signs at Discharge",
+      "section": "Hospital Course",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Condition at Discharge",
+      "section": "Hospital Course",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Provisional Diagnosis at Admission",
+      "section": "Diagnosis",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Final/Principal Diagnosis",
+      "section": "Diagnosis",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "ICD-10 Code (Principal)",
+      "section": "Diagnosis",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Secondary Diagnoses",
+      "section": "Diagnosis",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "ICD-10 Codes (Secondary)",
+      "section": "Diagnosis",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Comorbidities",
+      "section": "Diagnosis",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Laboratory Investigations & Results",
+      "section": "Procedures & Investigations",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Radiology/Imaging Studies & Findings",
+      "section": "Procedures & Investigations",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Surgical Procedures Performed",
+      "section": "Procedures & Investigations",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Procedure Codes (CPT/ICD-10-PCS)",
+      "section": "Procedures & Investigations",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date of Surgery/Procedure",
+      "section": "Procedures & Investigations",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Surgeon Name",
+      "section": "Procedures & Investigations",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Other Diagnostic Procedures",
+      "section": "Procedures & Investigations",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Pathology/Biopsy Results",
+      "section": "Procedures & Investigations",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Medications Given During Hospitalization",
+      "section": "Treatment Summary",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "IV Fluids/Blood Products Administered",
+      "section": "Treatment Summary",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Therapeutic Interventions",
+      "section": "Treatment Summary",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Consultations Obtained",
+      "section": "Treatment Summary",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Discharge Type",
+      "section": "Discharge Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Routine/Home", "Against Medical Advice (AMA)", "Transfer to Another Facility", "Discharged to Nursing Home", "Discharged to Rehabilitation Facility", "Expired", "Left Without Being Seen (LWBS)", "Other"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Discharge Status",
+      "section": "Discharge Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Improved", "Stable", "Partially Improved", "No Change", "Deteriorated", "Deceased"]
+    },
+    {
+      "type": "textarea",
+      "label": "Discharge Medications (with Dosage & Duration)",
+      "section": "Discharge Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Medications to Continue",
+      "section": "Discharge Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Medications Stopped/Changed",
+      "section": "Discharge Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Dietary Instructions",
+      "section": "Discharge Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Activity Restrictions",
+      "section": "Discharge Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Wound Care/Dressing Instructions",
+      "section": "Discharge Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Equipment/Supplies Provided",
+      "section": "Discharge Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Follow-up Required?",
+      "section": "Follow-up Instructions",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "text",
+      "label": "Follow-up Appointment Date",
+      "section": "Follow-up Instructions",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Follow-up With (Physician Name)",
+      "section": "Follow-up Instructions",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Follow-up Department",
+      "section": "Follow-up Instructions",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Pending Tests/Results at Discharge",
+      "section": "Follow-up Instructions",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Further Investigations Required",
+      "section": "Follow-up Instructions",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Referrals to Specialists",
+      "section": "Follow-up Instructions",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Warning Signs to Watch For",
+      "section": "Follow-up Instructions",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "When to Seek Emergency Care",
+      "section": "Follow-up Instructions",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Patient/Family Education Provided",
+      "section": "Follow-up Instructions",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Prognosis",
+      "section": "Follow-up Instructions",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Additional Comments/Recommendations",
+      "section": "Follow-up Instructions",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Prepared By (Physician Name)",
+      "section": "Follow-up Instructions",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Physician Signature",
+      "section": "Follow-up Instructions",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date of Summary",
+      "section": "Follow-up Instructions",
+      "priority": "critical",
+      "required": false
+    }
+  ]
+}

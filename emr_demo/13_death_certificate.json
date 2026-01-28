@@ -1,0 +1,322 @@
+{
+  "formTitle": "Death Certificate Form",
+  "formId": "FORM-013",
+  "category": "Legal",
+  "sections": ["Deceased Information", "Death Details", "Cause of Death", "Medical Certifier", "Disposition"],
+  "fields": [
+    {
+      "type": "text",
+      "label": "Death Certificate Number",
+      "section": "Deceased Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Deceased Name",
+      "section": "Deceased Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date of Birth",
+      "section": "Deceased Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Age at Death",
+      "section": "Deceased Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Gender",
+      "section": "Deceased Information",
+      "priority": "normal",
+      "required": false,
+      "options": ["Male", "Female", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Patient ID/Hospital Number",
+      "section": "Deceased Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Residential Address",
+      "section": "Deceased Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Nationality",
+      "section": "Deceased Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "National ID/SSN",
+      "section": "Deceased Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Father's Name",
+      "section": "Deceased Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Mother's Name",
+      "section": "Deceased Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Spouse's Name",
+      "section": "Deceased Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date of Death",
+      "section": "Death Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Time of Death",
+      "section": "Death Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Place of Death",
+      "section": "Death Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Hospital - Inpatient", "Hospital - Emergency Department", "Hospital - Operating Room", "Hospital - ICU", "Home", "Nursing Home", "Hospice", "Dead on Arrival", "En Route to Hospital", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Hospital/Facility Name",
+      "section": "Death Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Ward/Room Number",
+      "section": "Death Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Manner of Death",
+      "section": "Death Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Natural", "Accident", "Suicide", "Homicide", "Pending Investigation", "Could Not Be Determined"]
+    },
+    {
+      "type": "radio",
+      "label": "Was Autopsy Performed?",
+      "section": "Death Details",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No", "Pending"]
+    },
+    {
+      "type": "textarea",
+      "label": "Immediate Cause of Death (Part I-a)",
+      "section": "Cause of Death",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Duration (Part I-a)",
+      "section": "Cause of Death",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Due to/Consequence of (Part I-b)",
+      "section": "Cause of Death",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Duration (Part I-b)",
+      "section": "Cause of Death",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Due to/Consequence of (Part I-c)",
+      "section": "Cause of Death",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Duration (Part I-c)",
+      "section": "Cause of Death",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Underlying Cause (Part I-d)",
+      "section": "Cause of Death",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Duration (Part I-d)",
+      "section": "Cause of Death",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Other Significant Conditions (Part II)",
+      "section": "Cause of Death",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "ICD-10 Codes",
+      "section": "Cause of Death",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Was Death Related to Pregnancy?",
+      "section": "Cause of Death",
+      "priority": "optional",
+      "required": false,
+      "options": ["Yes", "No", "Not Applicable"]
+    },
+    {
+      "type": "textarea",
+      "label": "Details of Injury (if applicable)",
+      "section": "Cause of Death",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Certifying Physician Name",
+      "section": "Medical Certifier",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Physician Registration Number",
+      "section": "Medical Certifier",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Department/Specialty",
+      "section": "Medical Certifier",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Contact Number",
+      "section": "Medical Certifier",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Hospital/Clinic Address",
+      "section": "Medical Certifier",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Physician Signature",
+      "section": "Medical Certifier",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date Signed",
+      "section": "Medical Certifier",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Method of Disposition",
+      "section": "Disposition",
+      "priority": "normal",
+      "required": false,
+      "options": ["Burial", "Cremation", "Donation (Medical Science)", "Other", "Pending"]
+    },
+    {
+      "type": "text",
+      "label": "Place of Disposition",
+      "section": "Disposition",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Funeral Home/Mortuary",
+      "section": "Disposition",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Informant Name",
+      "section": "Disposition",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Informant Relationship",
+      "section": "Disposition",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Informant Contact",
+      "section": "Disposition",
+      "priority": "optional",
+      "required": false
+    }
+  ]
+}

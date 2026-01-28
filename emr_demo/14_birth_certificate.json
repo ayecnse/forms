@@ -1,0 +1,421 @@
+{
+  "formTitle": "Birth Certificate & Delivery Record",
+  "formId": "FORM-014",
+  "category": "Obstetrics",
+  "sections": ["Newborn Information", "Mother Information", "Father Information", "Birth Details", "Delivery Details", "Newborn Assessment", "Certifier Information"],
+  "fields": [
+    {
+      "type": "text",
+      "label": "Birth Certificate Number",
+      "section": "Newborn Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Newborn Name",
+      "section": "Newborn Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date of Birth",
+      "section": "Newborn Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Time of Birth",
+      "section": "Newborn Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Sex",
+      "section": "Newborn Information",
+      "priority": "critical",
+      "required": false,
+      "options": ["Male", "Female", "Ambiguous"]
+    },
+    {
+      "type": "text",
+      "label": "Birth Weight (grams)",
+      "section": "Newborn Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Birth Length (cm)",
+      "section": "Newborn Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Head Circumference (cm)",
+      "section": "Newborn Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Blood Group",
+      "section": "Newborn Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Birth Order (if multiple birth)",
+      "section": "Newborn Information",
+      "priority": "optional",
+      "required": false,
+      "options": ["Single Birth", "1st of Twins", "2nd of Twins", "1st of Triplets", "2nd of Triplets", "3rd of Triplets", "Other Multiple Birth"]
+    },
+    {
+      "type": "text",
+      "label": "Mother's Name",
+      "section": "Mother Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Mother's Patient ID",
+      "section": "Mother Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Mother's Date of Birth",
+      "section": "Mother Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Mother's Age at Delivery",
+      "section": "Mother Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Mother's Nationality",
+      "section": "Mother Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Mother's Address",
+      "section": "Mother Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Mother's Contact Number",
+      "section": "Mother Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Mother's Blood Group",
+      "section": "Mother Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Father's Name",
+      "section": "Father Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Father's Date of Birth",
+      "section": "Father Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Father's Age",
+      "section": "Father Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Father's Nationality",
+      "section": "Father Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Father's Contact Number",
+      "section": "Father Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Place of Birth",
+      "section": "Birth Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Hospital", "Birthing Center", "Home", "En Route", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Hospital/Facility Name",
+      "section": "Birth Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Hospital Address",
+      "section": "Birth Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "City/State/Country of Birth",
+      "section": "Birth Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Type of Delivery",
+      "section": "Delivery Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Spontaneous Vaginal Delivery (SVD)", "Vacuum Assisted", "Forceps Assisted", "Cesarean Section - Elective", "Cesarean Section - Emergency", "VBAC (Vaginal Birth After Cesarean)"]
+    },
+    {
+      "type": "text",
+      "label": "Gestational Age (weeks)",
+      "section": "Delivery Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Term Classification",
+      "section": "Delivery Details",
+      "priority": "normal",
+      "required": false,
+      "options": ["Preterm (<37 weeks)", "Term (37-42 weeks)", "Post-term (>42 weeks)"]
+    },
+    {
+      "type": "text",
+      "label": "Number of Previous Live Births",
+      "section": "Delivery Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Number of Previous Stillbirths",
+      "section": "Delivery Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Presentation",
+      "section": "Delivery Details",
+      "priority": "normal",
+      "required": false,
+      "options": ["Cephalic (Vertex)", "Breech", "Transverse", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Duration of Labor (hours)",
+      "section": "Delivery Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Anesthesia Used?",
+      "section": "Delivery Details",
+      "priority": "optional",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "text",
+      "label": "Type of Anesthesia",
+      "section": "Delivery Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Delivering Physician/Midwife",
+      "section": "Delivery Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Complications During Delivery",
+      "section": "Delivery Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "APGAR Score at 1 minute",
+      "section": "Newborn Assessment",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "APGAR Score at 5 minutes",
+      "section": "Newborn Assessment",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "APGAR Score at 10 minutes (if applicable)",
+      "section": "Newborn Assessment",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Resuscitation Required?",
+      "section": "Newborn Assessment",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "textarea",
+      "label": "Resuscitation Details",
+      "section": "Newborn Assessment",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Congenital Anomalies Detected?",
+      "section": "Newborn Assessment",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "textarea",
+      "label": "Details of Anomalies",
+      "section": "Newborn Assessment",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Initial Newborn Status",
+      "section": "Newborn Assessment",
+      "priority": "critical",
+      "required": false,
+      "options": ["Live Birth - Vigorous", "Live Birth - Required Assistance", "Stillbirth - Macerated", "Stillbirth - Fresh", "Neonatal Death"]
+    },
+    {
+      "type": "radio",
+      "label": "Vitamin K Given?",
+      "section": "Newborn Assessment",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "radio",
+      "label": "Eye Prophylaxis Given?",
+      "section": "Newborn Assessment",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "radio",
+      "label": "Hepatitis B Vaccine Given?",
+      "section": "Newborn Assessment",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No", "Scheduled"]
+    },
+    {
+      "type": "radio",
+      "label": "Newborn Screening Tests Done?",
+      "section": "Newborn Assessment",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No", "Scheduled"]
+    },
+    {
+      "type": "text",
+      "label": "Certifying Physician Name",
+      "section": "Certifier Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Physician Registration Number",
+      "section": "Certifier Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Specialty",
+      "section": "Certifier Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Contact Number",
+      "section": "Certifier Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Physician Signature",
+      "section": "Certifier Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date Certified",
+      "section": "Certifier Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Additional Notes",
+      "section": "Certifier Information",
+      "priority": "optional",
+      "required": false
+    }
+  ]
+}

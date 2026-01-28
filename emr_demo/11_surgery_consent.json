@@ -1,0 +1,445 @@
+{
+  "formTitle": "Surgery & Procedure Consent Form",
+  "formId": "FORM-011",
+  "category": "Consent",
+  "sections": ["Patient Information", "Procedure Details", "Physician Information", "Consent Declaration", "Risks & Benefits", "Alternatives", "Anesthesia", "Witness & Signatures"],
+  "fields": [
+    {
+      "type": "text",
+      "label": "Consent Form Number",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date of Consent",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Patient ID",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Patient Name",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date of Birth",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Age",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Gender",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false,
+      "options": ["Male", "Female", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Contact Number",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Address",
+      "section": "Patient Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Name of Procedure/Surgery",
+      "section": "Procedure Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Procedure Code (CPT/ICD-10-PCS)",
+      "section": "Procedure Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Procedure Type",
+      "section": "Procedure Details",
+      "priority": "normal",
+      "required": false,
+      "options": ["Major Surgery", "Minor Surgery", "Diagnostic Procedure", "Therapeutic Procedure", "Emergency Procedure", "Elective Procedure"]
+    },
+    {
+      "type": "textarea",
+      "label": "Indication/Reason for Procedure",
+      "section": "Procedure Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Site/Location of Procedure",
+      "section": "Procedure Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Laterality (if applicable)",
+      "section": "Procedure Details",
+      "priority": "optional",
+      "required": false,
+      "options": ["Left", "Right", "Bilateral", "Not Applicable"]
+    },
+    {
+      "type": "date",
+      "label": "Scheduled Date",
+      "section": "Procedure Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Scheduled Time",
+      "section": "Procedure Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Brief Description of Procedure",
+      "section": "Procedure Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Surgeon Name",
+      "section": "Physician Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Surgeon Registration Number",
+      "section": "Physician Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Department/Specialty",
+      "section": "Physician Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Assisting Surgeon(s)",
+      "section": "Physician Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Anesthesiologist Name",
+      "section": "Physician Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "display",
+      "label": "Consent Declaration",
+      "section": "Consent Declaration",
+      "priority": "critical",
+      "required": false,
+      "displayValue": "I hereby consent to undergo the above-mentioned procedure/surgery as explained to me by my physician."
+    },
+    {
+      "type": "radio",
+      "label": "I understand the nature of the procedure",
+      "section": "Consent Declaration",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "radio",
+      "label": "I have had the opportunity to ask questions",
+      "section": "Consent Declaration",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "radio",
+      "label": "All my questions have been answered satisfactorily",
+      "section": "Consent Declaration",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "radio",
+      "label": "I understand this is voluntary and I can withdraw consent",
+      "section": "Consent Declaration",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "textarea",
+      "label": "Purpose & Expected Benefits",
+      "section": "Risks & Benefits",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Common Risks & Complications",
+      "section": "Risks & Benefits",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Serious/Rare Risks",
+      "section": "Risks & Benefits",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "checkbox",
+      "label": "General Surgical Risks (Acknowledged)",
+      "section": "Risks & Benefits",
+      "priority": "normal",
+      "required": false,
+      "options": ["Bleeding", "Infection", "Pain", "Scarring", "Anesthesia Complications", "Blood Clots", "Organ Injury", "Need for Additional Surgery", "Death (in rare cases)"]
+    },
+    {
+      "type": "textarea",
+      "label": "Specific Risks for This Procedure",
+      "section": "Risks & Benefits",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "I understand no guarantee of outcome",
+      "section": "Risks & Benefits",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "textarea",
+      "label": "Alternative Treatment Options Discussed",
+      "section": "Alternatives",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Consequences of Not Having the Procedure",
+      "section": "Alternatives",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "I understand alternatives have been explained",
+      "section": "Alternatives",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Type of Anesthesia",
+      "section": "Anesthesia",
+      "priority": "critical",
+      "required": false,
+      "options": ["General Anesthesia", "Regional Anesthesia (Spinal/Epidural)", "Local Anesthesia", "Sedation (Conscious)", "MAC (Monitored Anesthesia Care)", "Not Applicable"]
+    },
+    {
+      "type": "radio",
+      "label": "Anesthesia risks explained",
+      "section": "Anesthesia",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No", "Not Applicable"]
+    },
+    {
+      "type": "textarea",
+      "label": "Specific Anesthesia Considerations",
+      "section": "Anesthesia",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Blood Transfusion Consent",
+      "section": "Anesthesia",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes - Consent Given", "No - Refused", "Not Discussed"]
+    },
+    {
+      "type": "textarea",
+      "label": "Blood Transfusion Refusal Reason (if applicable)",
+      "section": "Anesthesia",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Consent for Photography/Recording for Medical Purposes",
+      "section": "Anesthesia",
+      "priority": "optional",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "radio",
+      "label": "Consent for Disposal of Tissue/Specimens",
+      "section": "Anesthesia",
+      "priority": "optional",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "radio",
+      "label": "Consent Given By",
+      "section": "Witness & Signatures",
+      "priority": "critical",
+      "required": false,
+      "options": ["Patient", "Legal Guardian", "Next of Kin", "Power of Attorney"]
+    },
+    {
+      "type": "text",
+      "label": "If Not Patient, Name of Person Giving Consent",
+      "section": "Witness & Signatures",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Relationship to Patient",
+      "section": "Witness & Signatures",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Reason Patient Cannot Sign",
+      "section": "Witness & Signatures",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Patient/Guardian Signature",
+      "section": "Witness & Signatures",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date Signed",
+      "section": "Witness & Signatures",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Time Signed",
+      "section": "Witness & Signatures",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Physician Signature",
+      "section": "Witness & Signatures",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Physician Date",
+      "section": "Witness & Signatures",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Witness 1 Name",
+      "section": "Witness & Signatures",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Witness 1 Signature",
+      "section": "Witness & Signatures",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Witness 1 Designation",
+      "section": "Witness & Signatures",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Witness 2 Name",
+      "section": "Witness & Signatures",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Witness 2 Signature",
+      "section": "Witness & Signatures",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Witness 2 Designation",
+      "section": "Witness & Signatures",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Additional Notes/Comments",
+      "section": "Witness & Signatures",
+      "priority": "optional",
+      "required": false
+    }
+  ]
+}

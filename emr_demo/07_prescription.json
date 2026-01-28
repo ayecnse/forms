@@ -1,0 +1,395 @@
+{
+  "formTitle": "Prescription Form",
+  "formId": "FORM-007",
+  "category": "Medication",
+  "sections": ["Patient Information", "Prescriber Information", "Medication Details", "Instructions", "Refill & Validity"],
+  "fields": [
+    {
+      "type": "text",
+      "label": "Prescription Number",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Prescription Date",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Patient ID",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Patient Name",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Age",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Gender",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false,
+      "options": ["Male", "Female", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Weight (kg)",
+      "section": "Patient Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Contact Number",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Address",
+      "section": "Patient Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Known Allergies",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Doctor Name",
+      "section": "Prescriber Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Doctor Registration Number",
+      "section": "Prescriber Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Specialty",
+      "section": "Prescriber Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Department",
+      "section": "Prescriber Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Contact Number",
+      "section": "Prescriber Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Clinic/Hospital Address",
+      "section": "Prescriber Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Medication 1 - Generic Name",
+      "section": "Medication Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Medication 1 - Brand Name",
+      "section": "Medication Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Medication 1 - Strength/Dosage",
+      "section": "Medication Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Medication 1 - Dosage Form",
+      "section": "Medication Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Tablet", "Capsule", "Syrup", "Suspension", "Drops", "Injection", "Cream", "Ointment", "Gel", "Inhaler", "Patch", "Suppository", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Medication 1 - Frequency",
+      "section": "Medication Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Medication 1 - Duration",
+      "section": "Medication Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Medication 1 - Route",
+      "section": "Medication Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Medication 1 - Quantity",
+      "section": "Medication Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Medication 2 - Generic Name",
+      "section": "Medication Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Medication 2 - Brand Name",
+      "section": "Medication Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Medication 2 - Strength/Dosage",
+      "section": "Medication Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Medication 2 - Dosage Form",
+      "section": "Medication Details",
+      "priority": "optional",
+      "required": false,
+      "options": ["Tablet", "Capsule", "Syrup", "Suspension", "Drops", "Injection", "Cream", "Ointment", "Gel", "Inhaler", "Patch", "Suppository", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Medication 2 - Frequency",
+      "section": "Medication Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Medication 2 - Duration",
+      "section": "Medication Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Medication 2 - Route",
+      "section": "Medication Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Medication 2 - Quantity",
+      "section": "Medication Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Medication 3 - Generic Name",
+      "section": "Medication Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Medication 3 - Brand Name",
+      "section": "Medication Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Medication 3 - Strength/Dosage",
+      "section": "Medication Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Medication 3 - Dosage Form",
+      "section": "Medication Details",
+      "priority": "optional",
+      "required": false,
+      "options": ["Tablet", "Capsule", "Syrup", "Suspension", "Drops", "Injection", "Cream", "Ointment", "Gel", "Inhaler", "Patch", "Suppository", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Medication 3 - Frequency",
+      "section": "Medication Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Medication 3 - Duration",
+      "section": "Medication Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Medication 3 - Route",
+      "section": "Medication Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Medication 3 - Quantity",
+      "section": "Medication Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Additional Medications (4+)",
+      "section": "Medication Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "General Instructions",
+      "section": "Instructions",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "checkbox",
+      "label": "Special Instructions",
+      "section": "Instructions",
+      "priority": "optional",
+      "required": false,
+      "options": ["Take with food", "Take on empty stomach", "Take before meals", "Take after meals", "Take at bedtime", "Avoid alcohol", "Avoid dairy products", "Avoid driving", "Complete full course", "Do not crush or chew", "Shake well before use", "Store in refrigerator", "Protect from light", "Other"]
+    },
+    {
+      "type": "textarea",
+      "label": "Dietary Restrictions/Advice",
+      "section": "Instructions",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Warning/Precautions",
+      "section": "Instructions",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Expected Side Effects",
+      "section": "Instructions",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "When to Seek Medical Attention",
+      "section": "Instructions",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Refill Allowed?",
+      "section": "Refill & Validity",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "number",
+      "label": "Number of Refills",
+      "section": "Refill & Validity",
+      "priority": "optional",
+      "required": false,
+      "min": 0,
+      "max": 12
+    },
+    {
+      "type": "date",
+      "label": "Valid Until",
+      "section": "Refill & Validity",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Controlled Substance?",
+      "section": "Refill & Validity",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "textarea",
+      "label": "Additional Notes",
+      "section": "Refill & Validity",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Doctor Signature",
+      "section": "Refill & Validity",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Stamp/Seal Number",
+      "section": "Refill & Validity",
+      "priority": "optional",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,451 @@
+{
+  "formTitle": "Medical Consultation Form",
+  "formId": "FORM-004",
+  "category": "Clinical",
+  "sections": ["Patient Information", "Consultation Details", "Chief Complaint", "History", "Physical Examination", "Assessment", "Diagnosis", "Treatment Plan", "Follow-up"],
+  "fields": [
+    {
+      "type": "text",
+      "label": "Patient ID",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Patient Name",
+      "section": "Patient Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Age",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Gender",
+      "section": "Patient Information",
+      "priority": "normal",
+      "required": false,
+      "options": ["Male", "Female", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Blood Group",
+      "section": "Patient Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Consultation Date",
+      "section": "Consultation Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Consultation Time",
+      "section": "Consultation Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Consulting Physician Name",
+      "section": "Consultation Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Physician ID",
+      "section": "Consultation Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Department/Specialty",
+      "section": "Consultation Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Cardiology", "Dermatology", "Endocrinology", "Gastroenterology", "General Medicine", "Neurology", "Obstetrics & Gynecology", "Oncology", "Ophthalmology", "Orthopedics", "Pediatrics", "Psychiatry", "Surgery", "Urology", "Other"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Visit Type",
+      "section": "Consultation Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["First Visit", "Follow-up", "Emergency Consultation", "Referral", "Second Opinion", "Post-Operative", "Pre-Operative"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Consultation Mode",
+      "section": "Consultation Details",
+      "priority": "normal",
+      "required": false,
+      "options": ["In-Person", "Telemedicine", "Phone", "Bedside"]
+    },
+    {
+      "type": "text",
+      "label": "Referring Physician",
+      "section": "Consultation Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Chief Complaint",
+      "section": "Chief Complaint",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Duration of Symptoms",
+      "section": "Chief Complaint",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "History of Present Illness (HPI)",
+      "section": "History",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Past Medical History",
+      "section": "History",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Past Surgical History",
+      "section": "History",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Family History",
+      "section": "History",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Social History",
+      "section": "History",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Smoking Status",
+      "section": "History",
+      "priority": "optional",
+      "required": false,
+      "options": ["Never", "Current Smoker", "Former Smoker"]
+    },
+    {
+      "type": "radio",
+      "label": "Alcohol Consumption",
+      "section": "History",
+      "priority": "optional",
+      "required": false,
+      "options": ["None", "Occasional", "Regular", "Heavy"]
+    },
+    {
+      "type": "textarea",
+      "label": "Current Medications",
+      "section": "History",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Known Allergies",
+      "section": "History",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Immunization History",
+      "section": "History",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Review of Systems (ROS)",
+      "section": "History",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "General Appearance",
+      "section": "Physical Examination",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Blood Pressure",
+      "section": "Physical Examination",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Heart Rate",
+      "section": "Physical Examination",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Respiratory Rate",
+      "section": "Physical Examination",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Temperature",
+      "section": "Physical Examination",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "SpO2",
+      "section": "Physical Examination",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Weight",
+      "section": "Physical Examination",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Height",
+      "section": "Physical Examination",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "BMI",
+      "section": "Physical Examination",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Head, Eyes, Ears, Nose, Throat (HEENT)",
+      "section": "Physical Examination",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Cardiovascular System",
+      "section": "Physical Examination",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Respiratory System",
+      "section": "Physical Examination",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Gastrointestinal System",
+      "section": "Physical Examination",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Musculoskeletal System",
+      "section": "Physical Examination",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Neurological Examination",
+      "section": "Physical Examination",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Skin & Extremities",
+      "section": "Physical Examination",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Other Findings",
+      "section": "Physical Examination",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Clinical Assessment",
+      "section": "Assessment",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Differential Diagnoses",
+      "section": "Assessment",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Primary Diagnosis",
+      "section": "Diagnosis",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "ICD-10 Code (Primary)",
+      "section": "Diagnosis",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Secondary Diagnoses",
+      "section": "Diagnosis",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "ICD-10 Codes (Secondary)",
+      "section": "Diagnosis",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Medications Prescribed",
+      "section": "Treatment Plan",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Investigations Ordered",
+      "section": "Treatment Plan",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Procedures Recommended/Performed",
+      "section": "Treatment Plan",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Referrals to Specialists",
+      "section": "Treatment Plan",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Dietary & Lifestyle Modifications",
+      "section": "Treatment Plan",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Patient Education Provided",
+      "section": "Treatment Plan",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Hospitalization Required?",
+      "section": "Treatment Plan",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "textarea",
+      "label": "Hospitalization Details",
+      "section": "Treatment Plan",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Follow-up Required?",
+      "section": "Follow-up",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No", "As Needed"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Follow-up Duration",
+      "section": "Follow-up",
+      "priority": "normal",
+      "required": false,
+      "options": ["1 week", "2 weeks", "1 month", "2 months", "3 months", "6 months", "1 year", "Other"]
+    },
+    {
+      "type": "textarea",
+      "label": "Follow-up Instructions",
+      "section": "Follow-up",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Additional Notes",
+      "section": "Follow-up",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Next Appointment Date",
+      "section": "Follow-up",
+      "priority": "optional",
+      "required": false
+    }
+  ]
+}
