@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AyeCNSe Forms</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+
+        .license {
+            font-size: 0.85em;
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .config-panel, .preview-panel {
+            padding: 30px;
+        }
+
+        .config-panel {
+            border-right: 2px solid #e0e0e0;
+            background: #f8f9fa;
+        }
+
+        .preview-panel {
+            background: white;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #218838;
+        }
+
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #c82333;
+        }
+
+        .field-editor {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .field-editor-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .field-editor-header h4 {
+            color: #667eea;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select,
+        textarea {
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .modal-header h3 {
+            color: #667eea;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            color: #999;
+        }
+
+        .close-modal:hover {
+            color: #333;
+        }
+
+        .form-preview {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        .form-section-title {
+            font-size: 1.3em;
+            color: #667eea;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .form-field {
+            margin-bottom: 20px;
+        }
+
+        .form-field label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .form-field label.required::after {
+            content: " *";
+            color: #dc3545;
+        }
+
+        .form-field.priority-critical label {
+            color: #dc3545;
+            font-weight: 700;
+        }
+
+        .form-field.priority-optional label {
+            color: #6c757d;
+        }
+
+        .form-field input[type="text"],
+        .form-field input[type="number"],
+        .form-field input[type="date"],
+        .form-field select,
+        .form-field textarea {
+            width: 100%;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .radio-option,
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .mode-selector {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #fff3cd;
+            border-radius: 8px;
+            border: 2px solid #ffc107;
+        }
+
+        .mode-selector label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .output-display {
+            background: #f8f9fa;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .output-display pre {
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .field-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .no-fields {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .file-upload-label {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #667eea;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .file-upload-label:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .config-panel {
+                border-right: none;
+                border-bottom: 2px solid #e0e0e0;
+            }
+        }
+
+        @media (orientation: landscape) and (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .config-panel, .preview-panel {
+                padding: 15px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (orientation: portrait) and (min-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AyeCNSe Forms</h1>
+            <p>AI-First Browser-Based Interface Specification Builder</p>
+            <div class="license">GPL v2 License | Copyright 2026 Abhishek Choudhary</div>
+        </div>
+
+        <div class="main-content">
+            <div class="config-panel">
+                <h2 class="section-title">Configuration</h2>
+
+                <div class="button-group">
+                    <button class="btn-primary" onclick="app.addField()">+ Add Field</button>
+                    <button class="btn-secondary" onclick="app.openAIModal()">🤖 AI Design</button>
+                    <button class="btn-secondary" onclick="app.openLoadModal()">📂 Load Config</button>
+                    <button class="btn-success" onclick="app.downloadConfig()">💾 Download</button>
+                    <button class="btn-danger" onclick="app.clearAll()">🗑️ Clear All</button>
+                </div>
+
+                <div class="field-list" id="fieldList">
+                    <div class="no-fields">No fields yet. Click "Add Field" to start.</div>
+                </div>
+            </div>
+
+            <div class="preview-panel">
+                <h2 class="section-title">Form Preview</h2>
+
+                <div class="mode-selector">
+                    <label>
+                        <input type="radio" name="mode" value="simulation" checked onchange="app.setMode(this.value)">
+                        Simulation Mode
+                    </label>
+                    <label>
+                        <input type="radio" name="mode" value="live" onchange="app.setMode(this.value)">
+                        Live Mode
+                    </label>
+                </div>
+
+                <button class="btn-primary" onclick="app.openAIFill()" style="margin-bottom: 15px;">🤖 AI-Assisted Fill</button>
+                <button class="btn-secondary" onclick="app.openPasteFilledModal()" style="margin-bottom: 15px;">📋 Paste Filled JSON</button>
+
+                <div class="form-preview" id="formPreview">
+                    <div class="no-fields">Form preview will appear here</div>
+                </div>
+
+                <div class="button-group" style="margin-top: 20px;">
+                    <button class="btn-success" onclick="app.submitForm()">Submit Form</button>
+                    <button class="btn-secondary" onclick="app.resetForm()">Reset</button>
+                </div>
+
+                <div class="output-display" id="outputDisplay" style="display: none;">
+                    <h3>Form Output:</h3>
+                    <pre id="outputContent"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Modal -->
+    <div class="modal" id="aiModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>AI-Assisted Form Design</h3>
+                <button class="close-modal" onclick="app.closeAIModal()">×</button>
+            </div>
+            <p style="margin-bottom: 15px;">Click the button below to open Claude AI in a new tab. Copy the prompt, get the JSON response, and paste it back here.</p>
+            
+            <button class="btn-primary" onclick="app.openClaudeAI()" style="margin-bottom: 15px; width: 100%;">Open Claude AI</button>
+            
+            <div class="form-group">
+                <label>Paste Claude's JSON Response:</label>
+                <textarea id="aiJsonInput" rows="10" placeholder='{"formTitle": "...", "sections": [...], "fields": [...]}'></textarea>
+            </div>
+            
+            <div class="button-group" style="margin-top: 15px;">
+                <button class="btn-success" onclick="app.importAIJson()">Import Configuration</button>
+                <button class="btn-secondary" onclick="app.closeAIModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load Config Modal -->
+    <div class="modal" id="loadModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Load Configuration</h3>
+                <button class="close-modal" onclick="app.closeLoadModal()">×</button>
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 15px;">
+                <label for="fileUpload" class="file-upload-label">📁 Upload JSON File</label>
+                <input type="file" id="fileUpload" accept=".json" onchange="app.loadFromFile(this)">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 15px;">
+                <label>Or paste JSON:</label>
+                <textarea id="jsonInput" rows="10" placeholder='{"formTitle": "...", "sections": [...], "fields": [...]}'></textarea>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 15px;">
+                <label>Or load from GitHub raw URL:</label>
+                <input type="text" id="githubUrl" placeholder="https://raw.githubusercontent.com/...">
+            </div>
+
+            <div class="button-group">
+                <button class="btn-success" onclick="app.loadFromJson()">Load from JSON</button>
+                <button class="btn-success" onclick="app.loadFromGithub()">Load from GitHub</button>
+                <button class="btn-secondary" onclick="app.closeLoadModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Paste Filled Form Modal -->
+    <div class="modal" id="pasteFilledModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Paste Filled Form Data</h3>
+                <button class="close-modal" onclick="app.closePasteFilledModal()">×</button>
+            </div>
+            <p style="margin-bottom: 15px;">After Claude AI has filled your form conversationally, paste the JSON response here to populate the form.</p>
+            
+            <div class="form-group">
+                <label>Paste Claude's Filled Form JSON:</label>
+                <textarea id="filledJsonInput" rows="15" placeholder='{"fieldName": "value", "anotherField": "value", ...}'></textarea>
+            </div>
+            
+            <div class="button-group" style="margin-top: 15px;">
+                <button class="btn-success" onclick="app.importFilledJson()">Populate Form</button>
+                <button class="btn-secondary" onclick="app.closePasteFilledModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Field Editor Modal -->
+    <div class="modal" id="fieldModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="fieldModalTitle">Add Field</h3>
+                <button class="close-modal" onclick="app.closeFieldModal()">×</button>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Field Type:</label>
+                    <select id="fieldType" onchange="app.updateFieldModal()">
+                        <option value="text">Text</option>
+                        <option value="textarea">Text Area</option>
+                        <option value="number">Number</option>
+                        <option value="checkbox">Checkbox</option>
+                        <option value="radio">Radio</option>
+                        <option value="dropdown">Dropdown</option>
+                        <option value="date">Date</option>
+                        <option value="display">Display (Read-only)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Priority:</label>
+                    <select id="fieldPriority">
+                        <option value="normal">Normal</option>
+                        <option value="critical">Critical</option>
+                        <option value="optional">Optional</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group full-width">
+                    <label>Label:</label>
+                    <input type="text" id="fieldLabel" placeholder="Field label">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group full-width">
+                    <label>Section:</label>
+                    <input type="text" id="fieldSection" placeholder="Section name (optional)">
+                </div>
+            </div>
+
+            <div class="form-row" id="numericFields" style="display: none;">
+                <div class="form-group">
+                    <label>Min Value:</label>
+                    <input type="number" id="fieldMin">
+                </div>
+                <div class="form-group">
+                    <label>Max Value:</label>
+                    <input type="number" id="fieldMax">
+                </div>
+            </div>
+
+            <div class="form-group full-width" id="regexField" style="display: none;">
+                <label>Validation Regex:</label>
+                <input type="text" id="fieldRegex" placeholder="^[A-Za-z]+$">
+            </div>
+
+            <div class="form-group full-width" id="optionsField" style="display: none;">
+                <label>Options (one per line):</label>
+                <textarea id="fieldOptions" rows="4" placeholder="Option 1
+Option 2
+Option 3"></textarea>
+            </div>
+
+            <div class="form-group full-width" id="displayValueField" style="display: none;">
+                <label>Display Value:</label>
+                <input type="text" id="fieldDisplayValue" placeholder="Status, value, etc.">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label style="display: flex; align-items: center; gap: 8px;">
+                        <input type="checkbox" id="fieldRequired">
+                        Required
+                    </label>
+                </div>
+            </div>
+
+            <div class="button-group" style="margin-top: 20px;">
+                <button class="btn-success" onclick="app.saveField()">Save Field</button>
+                <button class="btn-secondary" onclick="app.closeFieldModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const app = {
+            config: {
+                formTitle: "New Form",
+                mode: "simulation",
+                sections: [],
+                fields: []
+            },
+            currentFieldIndex: null,
+
+            init() {
+                this.loadFromLocalStorage();
+                this.render();
+            },
+
+            addField() {
+                this.currentFieldIndex = null;
+                document.getElementById('fieldModalTitle').textContent = 'Add Field';
+                document.getElementById('fieldType').value = 'text';
+                document.getElementById('fieldLabel').value = '';
+                document.getElementById('fieldSection').value = '';
+                document.getElementById('fieldPriority').value = 'normal';
+                document.getElementById('fieldRequired').checked = false;
+                document.getElementById('fieldMin').value = '';
+                document.getElementById('fieldMax').value = '';
+                document.getElementById('fieldRegex').value = '';
+                document.getElementById('fieldOptions').value = '';
+                document.getElementById('fieldDisplayValue').value = '';
+                this.updateFieldModal();
+                document.getElementById('fieldModal').classList.add('active');
+            },
+
+            editField(index) {
+                this.currentFieldIndex = index;
+                const field = this.config.fields[index];
+                document.getElementById('fieldModalTitle').textContent = 'Edit Field';
+                document.getElementById('fieldType').value = field.type;
+                document.getElementById('fieldLabel').value = field.label;
+                document.getElementById('fieldSection').value = field.section || '';
+                document.getElementById('fieldPriority').value = field.priority || 'normal';
+                document.getElementById('fieldRequired').checked = field.required || false;
+                document.getElementById('fieldMin').value = field.min || '';
+                document.getElementById('fieldMax').value = field.max || '';
+                document.getElementById('fieldRegex').value = field.regex || '';
+                document.getElementById('fieldOptions').value = field.options ? field.options.join('\n') : '';
+                document.getElementById('fieldDisplayValue').value = field.displayValue || '';
+                this.updateFieldModal();
+                document.getElementById('fieldModal').classList.add('active');
+            },
+
+            updateFieldModal() {
+                const type = document.getElementById('fieldType').value;
+                document.getElementById('numericFields').style.display = type === 'number' ? 'grid' : 'none';
+                document.getElementById('regexField').style.display = type === 'text' ? 'block' : 'none';
+                document.getElementById('optionsField').style.display = ['radio', 'dropdown'].includes(type) ? 'block' : 'none';
+                document.getElementById('displayValueField').style.display = type === 'display' ? 'block' : 'none';
+            },
+
+            saveField() {
+                const field = {
+                    type: document.getElementById('fieldType').value,
+                    label: document.getElementById('fieldLabel').value,
+                    section: document.getElementById('fieldSection').value || null,
+                    priority: document.getElementById('fieldPriority').value,
+                    required: document.getElementById('fieldRequired').checked
+                };
+
+                if (field.type === 'number') {
+                    const min = document.getElementById('fieldMin').value;
+                    const max = document.getElementById('fieldMax').value;
+                    if (min) field.min = parseFloat(min);
+                    if (max) field.max = parseFloat(max);
+                }
+
+                if (field.type === 'text') {
+                    const regex = document.getElementById('fieldRegex').value;
+                    if (regex) field.regex = regex;
+                }
+
+                if (['radio', 'dropdown'].includes(field.type)) {
+                    const options = document.getElementById('fieldOptions').value.split('\n').filter(o => o.trim());
+                    field.options = options;
+                }
+
+                if (field.type === 'display') {
+                    field.displayValue = document.getElementById('fieldDisplayValue').value;
+                }
+
+                if (!field.label) {
+                    alert('Label is required');
+                    return;
+                }
+
+                if (this.currentFieldIndex !== null) {
+                    this.config.fields[this.currentFieldIndex] = field;
+                } else {
+                    this.config.fields.push(field);
+                }
+
+                this.closeFieldModal();
+                this.saveToLocalStorage();
+                this.render();
+            },
+
+            deleteField(index) {
+                if (confirm('Delete this field?')) {
+                    this.config.fields.splice(index, 1);
+                    this.saveToLocalStorage();
+                    this.render();
+                }
+            },
+
+            closeFieldModal() {
+                document.getElementById('fieldModal').classList.remove('active');
+            },
+
+            openAIModal() {
+                document.getElementById('aiModal').classList.add('active');
+            },
+
+            closeAIModal() {
+                document.getElementById('aiModal').classList.remove('active');
+            },
+
+            openClaudeAI() {
+                const prompt = encodeURIComponent(`Generate a form configuration in JSON format for AyeCNSe Forms.
+
+The JSON should follow this structure:
+{
+  "formTitle": "Form Name",
+  "sections": ["Section 1", "Section 2"],
+  "fields": [
+    {
+      "type": "text|textarea|number|checkbox|radio|dropdown|date|display",
+      "label": "Field Label",
+      "section": "Section Name (optional)",
+      "priority": "normal|critical|optional",
+      "required": true|false,
+      "min": 0 (for number fields),
+      "max": 100 (for number fields),
+      "regex": "^[A-Za-z]+$" (for text fields),
+      "options": ["Option 1", "Option 2"] (for radio/dropdown),
+      "displayValue": "Value" (for display fields)
+    }
+  ]
+}
+
+Please create a form configuration based on the user's requirements. Output ONLY valid JSON, no markdown, no explanations.`);
+                
+                window.open(`https://claude.ai/new?q=${prompt}`, '_blank');
+            },
+
+            importAIJson() {
+                const json = document.getElementById('aiJsonInput').value;
+                try {
+                    const config = JSON.parse(json);
+                    this.validateAndLoadConfig(config);
+                    this.closeAIModal();
+                    document.getElementById('aiJsonInput').value = '';
+                } catch (e) {
+                    alert('Invalid JSON: ' + e.message);
+                }
+            },
+
+            openLoadModal() {
+                document.getElementById('loadModal').classList.add('active');
+            },
+
+            closeLoadModal() {
+                document.getElementById('loadModal').classList.remove('active');
+            },
+
+            loadFromFile(input) {
+                const file = input.files[0];
+                if (!file) return;
+
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    try {
+                        const config = JSON.parse(e.target.result);
+                        this.validateAndLoadConfig(config);
+                        this.closeLoadModal();
+                    } catch (err) {
+                        alert('Invalid JSON file: ' + err.message);
+                    }
+                };
+                reader.readAsText(file);
+            },
+
+            loadFromJson() {
+                const json = document.getElementById('jsonInput').value;
+                try {
+                    const config = JSON.parse(json);
+                    this.validateAndLoadConfig(config);
+                    this.closeLoadModal();
+                    document.getElementById('jsonInput').value = '';
+                } catch (e) {
+                    alert('Invalid JSON: ' + e.message);
+                }
+            },
+
+            async loadFromGithub() {
+                const url = document.getElementById('githubUrl').value;
+                if (!url) {
+                    alert('Please enter a GitHub raw URL');
+                    return;
+                }
+
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) throw new Error('Failed to fetch');
+                    const config = await response.json();
+                    this.validateAndLoadConfig(config);
+                    this.closeLoadModal();
+                    document.getElementById('githubUrl').value = '';
+                } catch (e) {
+                    alert('Failed to load from GitHub: ' + e.message);
+                }
+            },
+
+            validateAndLoadConfig(config) {
+                if (!config.fields || !Array.isArray(config.fields)) {
+                    throw new Error('Invalid configuration: fields array required');
+                }
+
+                this.config = {
+                    formTitle: config.formTitle || 'Imported Form',
+                    mode: config.mode || 'simulation',
+                    sections: config.sections || [],
+                    fields: config.fields
+                };
+
+                this.saveToLocalStorage();
+                this.render();
+            },
+
+            downloadConfig() {
+                const json = JSON.stringify(this.config, null, 2);
+                const blob = new Blob([json], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'ayecnse-form-config.json';
+                a.click();
+                URL.revokeObjectURL(url);
+            },
+
+            clearAll() {
+                if (confirm('Clear all fields and reset the form?')) {
+                    this.config = {
+                        formTitle: "New Form",
+                        mode: "simulation",
+                        sections: [],
+                        fields: []
+                    };
+                    this.saveToLocalStorage();
+                    this.render();
+                }
+            },
+
+            setMode(mode) {
+                this.config.mode = mode;
+                this.saveToLocalStorage();
+            },
+
+            render() {
+                this.renderFieldList();
+                this.renderFormPreview();
+            },
+
+            renderFieldList() {
+                const container = document.getElementById('fieldList');
+                
+                if (this.config.fields.length === 0) {
+                    container.innerHTML = '<div class="no-fields">No fields yet. Click "Add Field" to start.</div>';
+                    return;
+                }
+
+                container.innerHTML = this.config.fields.map((field, index) => `
+                    <div class="field-editor">
+                        <div class="field-editor-header">
+                            <h4>${field.label} (${field.type})</h4>
+                            <div>
+                                <button class="btn-secondary" style="padding: 8px 16px; margin-right: 5px;" onclick="app.editField(${index})">Edit</button>
+                                <button class="btn-danger" style="padding: 8px 16px;" onclick="app.deleteField(${index})">Delete</button>
+                            </div>
+                        </div>
+                        <div style="font-size: 0.9em; color: #666;">
+                            ${field.section ? `Section: ${field.section} | ` : ''}
+                            Priority: ${field.priority} | 
+                            Required: ${field.required ? 'Yes' : 'No'}
+                        </div>
+                    </div>
+                `).join('');
+            },
+
+            renderFormPreview() {
+                const container = document.getElementById('formPreview');
+                
+                if (this.config.fields.length === 0) {
+                    container.innerHTML = '<div class="no-fields">Form preview will appear here</div>';
+                    return;
+                }
+
+                const sections = {};
+                this.config.fields.forEach(field => {
+                    const section = field.section || 'General';
+                    if (!sections[section]) sections[section] = [];
+                    sections[section].push(field);
+                });
+
+                container.innerHTML = Object.entries(sections).map(([sectionName, fields]) => `
+                    <div class="form-section">
+                        <div class="form-section-title">${sectionName}</div>
+                        ${fields.map(field => this.renderField(field)).join('')}
+                    </div>
+                `).join('');
+            },
+
+            renderField(field) {
+                const fieldId = `field_${field.label.replace(/\s+/g, '_')}`;
+                const requiredClass = field.required ? 'required' : '';
+                const priorityClass = `priority-${field.priority}`;
+
+                switch (field.type) {
+                    case 'text':
+                        return `
+                            <div class="form-field ${priorityClass}">
+                                <label for="${fieldId}" class="${requiredClass}">${field.label}</label>
+                                <input type="text" id="${fieldId}" ${field.required ? 'required' : ''} 
+                                       ${field.regex ? `pattern="${field.regex}"` : ''}>
+                            </div>
+                        `;
+                    
+                    case 'textarea':
+                        return `
+                            <div class="form-field ${priorityClass}">
+                                <label for="${fieldId}" class="${requiredClass}">${field.label}</label>
+                                <textarea id="${fieldId}" ${field.required ? 'required' : ''}></textarea>
+                            </div>
+                        `;
+                    
+                    case 'number':
+                        return `
+                            <div class="form-field ${priorityClass}">
+                                <label for="${fieldId}" class="${requiredClass}">${field.label}</label>
+                                <input type="number" id="${fieldId}" ${field.required ? 'required' : ''}
+                                       ${field.min !== undefined ? `min="${field.min}"` : ''}
+                                       ${field.max !== undefined ? `max="${field.max}"` : ''}>
+                            </div>
+                        `;
+                    
+                    case 'checkbox':
+                        return `
+                            <div class="form-field ${priorityClass}">
+                                <label>
+                                    <input type="checkbox" id="${fieldId}" ${field.required ? 'required' : ''}>
+                                    ${field.label}
+                                </label>
+                            </div>
+                        `;
+                    
+                    case 'radio':
+                        return `
+                            <div class="form-field ${priorityClass}">
+                                <label class="${requiredClass}">${field.label}</label>
+                                <div class="radio-group">
+                                    ${(field.options || []).map((option, i) => `
+                                        <label class="radio-option">
+                                            <input type="radio" name="${fieldId}" value="${option}" 
+                                                   ${field.required && i === 0 ? 'required' : ''}>
+                                            ${option}
+                                        </label>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        `;
+                    
+                    case 'dropdown':
+                        return `
+                            <div class="form-field ${priorityClass}">
+                                <label for="${fieldId}" class="${requiredClass}">${field.label}</label>
+                                <select id="${fieldId}" ${field.required ? 'required' : ''}>
+                                    <option value="">-- Select --</option>
+                                    ${(field.options || []).map(option => `
+                                        <option value="${option}">${option}</option>
+                                    `).join('')}
+                                </select>
+                            </div>
+                        `;
+                    
+                    case 'date':
+                        return `
+                            <div class="form-field ${priorityClass}">
+                                <label for="${fieldId}" class="${requiredClass}">${field.label}</label>
+                                <input type="date" id="${fieldId}" ${field.required ? 'required' : ''}>
+                            </div>
+                        `;
+                    
+                    case 'display':
+                        return `
+                            <div class="form-field ${priorityClass}">
+                                <label>${field.label}</label>
+                                <input type="text" value="${field.displayValue || ''}" readonly 
+                                       style="background: #f0f0f0; cursor: not-allowed;">
+                            </div>
+                        `;
+                    
+                    default:
+                        return '';
+                }
+            },
+
+            openAIFill() {
+                if (this.config.fields.length === 0) {
+                    alert('Please design a form first before using AI-assisted fill');
+                    return;
+                }
+
+                // Build the form specification for Claude
+                const formSpec = {
+                    formTitle: this.config.formTitle,
+                    fields: this.config.fields.map(f => ({
+                        label: f.label,
+                        type: f.type,
+                        required: f.required,
+                        options: f.options,
+                        min: f.min,
+                        max: f.max,
+                        section: f.section
+                    }))
+                };
+
+                const prompt = encodeURIComponent(`I need you to help me fill out this form by asking me questions conversationally.
+
+Here is the form specification:
+${JSON.stringify(formSpec, null, 2)}
+
+Please:
+1. Use voice conversation if available to interact naturally with me
+2. Ask me about each field one by one or in logical groups
+3. For required fields, ensure I provide values
+4. For number fields, respect min/max constraints
+5. For radio/dropdown fields, only accept values from the provided options
+6. Once all information is collected, output ONLY a JSON object with field labels as keys and my answers as values
+7. Do not include any markdown, explanations, or text outside the JSON
+
+The JSON format should be:
+{
+  "Field Label 1": "user's answer",
+  "Field Label 2": "user's answer",
+  ...
+}
+
+Start by asking me about the form fields now.`);
+                
+                window.open(`https://claude.ai/new?q=${prompt}`, '_blank');
+                
+                // Show instruction
+                setTimeout(() => {
+                    if (confirm('Claude AI should now be open in a new tab.\n\n1. Have a conversation with Claude to fill the form\n2. Claude will output a JSON with your answers\n3. Copy that JSON\n4. Click "Paste Filled JSON" to populate the form\n\nClick OK to continue.')) {
+                        this.openPasteFilledModal();
+                    }
+                }, 1000);
+            },
+
+            openPasteFilledModal() {
+                document.getElementById('pasteFilledModal').classList.add('active');
+            },
+
+            closePasteFilledModal() {
+                document.getElementById('pasteFilledModal').classList.remove('active');
+            },
+
+            importFilledJson() {
+                const json = document.getElementById('filledJsonInput').value;
+                try {
+                    const filledData = JSON.parse(json);
+                    this.populateFormWithData(filledData);
+                    this.closePasteFilledModal();
+                    document.getElementById('filledJsonInput').value = '';
+                    alert('Form populated successfully!');
+                } catch (e) {
+                    alert('Invalid JSON: ' + e.message);
+                }
+            },
+
+            populateFormWithData(data) {
+                const formPreview = document.getElementById('formPreview');
+
+                this.config.fields.forEach(field => {
+                    const value = data[field.label];
+                    if (value === undefined) return;
+
+                    const fieldId = `field_${field.label.replace(/\s+/g, '_')}`;
+                    const element = document.getElementById(fieldId);
+
+                    if (!element) {
+                        // Handle radio buttons
+                        if (field.type === 'radio') {
+                            const radio = formPreview.querySelector(`input[name="${fieldId}"][value="${value}"]`);
+                            if (radio) radio.checked = true;
+                        }
+                        return;
+                    }
+
+                    if (field.type === 'checkbox') {
+                        element.checked = value === true || value === 'true' || value === 'yes';
+                    } else if (field.type === 'display') {
+                        // Read-only, skip
+                    } else {
+                        element.value = value;
+                    }
+                });
+            },
+
+            autoFill() {
+                // Deprecated - replaced with AI-assisted fill
+                this.openAIFill();
+            },
+
+            submitForm() {
+                const formPreview = document.getElementById('formPreview');
+                const formData = {};
+
+                this.config.fields.forEach(field => {
+                    const fieldId = `field_${field.label.replace(/\s+/g, '_')}`;
+                    const element = document.getElementById(fieldId) || formPreview.querySelector(`input[name="${fieldId}"]`);
+                    
+                    if (!element) return;
+
+                    if (field.type === 'checkbox') {
+                        formData[field.label] = element.checked;
+                    } else if (field.type === 'radio') {
+                        const selected = formPreview.querySelector(`input[name="${fieldId}"]:checked`);
+                        formData[field.label] = selected ? selected.value : null;
+                    } else if (field.type === 'display') {
+                        formData[field.label] = field.displayValue;
+                    } else {
+                        formData[field.label] = element.value;
+                    }
+
+                    // Validation
+                    if (field.required && !formData[field.label]) {
+                        alert(`${field.label} is required`);
+                        throw new Error('Validation failed');
+                    }
+                });
+
+                const output = {
+                    mode: this.config.mode,
+                    timestamp: new Date().toISOString(),
+                    formData: formData
+                };
+
+                document.getElementById('outputContent').textContent = JSON.stringify(output, null, 2);
+                document.getElementById('outputDisplay').style.display = 'block';
+            },
+
+            resetForm() {
+                const formPreview = document.getElementById('formPreview');
+                formPreview.querySelectorAll('input, textarea, select').forEach(el => {
+                    if (el.type === 'checkbox' || el.type === 'radio') {
+                        el.checked = false;
+                    } else if (!el.readOnly) {
+                        el.value = '';
+                    }
+                });
+                document.getElementById('outputDisplay').style.display = 'none';
+            },
+
+            saveToLocalStorage() {
+                localStorage.setItem('ayecnse_config', JSON.stringify(this.config));
+            },
+
+            loadFromLocalStorage() {
+                const saved = localStorage.getItem('ayecnse_config');
+                if (saved) {
+                    try {
+                        this.config = JSON.parse(saved);
+                    } catch (e) {
+                        console.error('Failed to load config from localStorage', e);
+                    }
+                }
+            }
+        };
+
+        // Initialize app on page load
+        window.addEventListener('DOMContentLoaded', () => app.init());
+    </script>
+</body>
+</html>
