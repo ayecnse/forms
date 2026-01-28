@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AyeCNSe Forms - Executor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 1em;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error {
+            background: #fee;
+            border: 2px solid #fcc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            color: #c00;
+        }
+
+        .error h3 {
+            margin-bottom: 10px;
+        }
+
+        .form-title {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .form-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .mode-selector {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #fff3cd;
+            border-radius: 8px;
+            border: 2px solid #ffc107;
+            justify-content: center;
+        }
+
+        .mode-selector label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .form-section {
+            margin-bottom: 40px;
+        }
+
+        .form-section-title {
+            font-size: 1.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .form-field {
+            margin-bottom: 25px;
+        }
+
+        .form-field label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .form-field label.required::after {
+            content: " *";
+            color: #dc3545;
+        }
+
+        .form-field.priority-critical label {
+            color: #dc3545;
+            font-weight: 700;
+        }
+
+        .form-field.priority-optional label {
+            color: #6c757d;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .radio-option,
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 15px 40px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        .output-display {
+            background: #f8f9fa;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .output-display h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .output-display pre {
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        .info-box {
+            background: #e7f3ff;
+            border: 2px solid #b3d9ff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .info-box h3 {
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .info-box code {
+            background: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* Responsive adjustments */
+        @media (orientation: landscape) and (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AyeCNSe Forms Executor</h1>
+            <p>Execute form configurations from URL</p>
+        </div>
+
+        <div class="content">
+            <div id="loadingState" class="loading">
+                <div class="spinner"></div>
+                <p>Loading form configuration...</p>
+            </div>
+
+            <div id="errorState" style="display: none;">
+                <div class="error">
+                    <h3>Error Loading Form</h3>
+                    <p id="errorMessage"></p>
+                </div>
+                <div class="info-box">
+                    <h3>How to use the Executor</h3>
+                    <p><strong>URL Format:</strong></p>
+                    <p><code>executor.html?form=&lt;config-url&gt;</code></p>
+                    <p style="margin-top: 15px;"><strong>Example:</strong></p>
+                    <p><code>executor.html?form=https://raw.githubusercontent.com/user/repo/main/form-config.json</code></p>
+                    <p style="margin-top: 15px;"><strong>Requirements:</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Valid JSON configuration URL</li>
+                        <li>CORS-enabled endpoint (e.g., GitHub raw URLs)</li>
+                        <li>Configuration must include <code>fields</code> array</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="formState" style="display: none;">
+                <h2 class="form-title" id="formTitle">Form</h2>
+                <div class="form-subtitle" id="formSubtitle"></div>
+
+                <div class="mode-selector">
+                    <label>
+                        <input type="radio" name="mode" value="simulation" checked onchange="executor.setMode(this.value)">
+                        Simulation Mode
+                    </label>
+                    <label>
+                        <input type="radio" name="mode" value="live" onchange="executor.setMode(this.value)">
+                        Live Mode
+                    </label>
+                </div>
+
+                <div id="formContent"></div>
+
+                <div class="button-group">
+                    <button class="btn-primary" onclick="executor.submitForm()">Submit Form</button>
+                    <button class="btn-secondary" onclick="executor.resetForm()">Reset</button>
+                </div>
+
+                <div class="output-display" id="outputDisplay" style="display: none;">
+                    <h3>Form Submission Result:</h3>
+                    <pre id="outputContent"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const executor = {
+            config: null,
+            mode: 'simulation',
+
+            async init() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const formUrl = urlParams.get('form');
+
+                if (!formUrl) {
+                    this.showError('No form URL provided. Please add ?form=<config-url> to the URL.');
+                    return;
+                }
+
+                try {
+                    await this.loadFormConfig(formUrl);
+                } catch (error) {
+                    this.showError(error.message);
+                }
+            },
+
+            async loadFormConfig(url) {
+                try {
+                    const response = await fetch(url);
+                    
+                    if (!response.ok) {
+                        throw new Error(`Failed to fetch form configuration: ${response.status} ${response.statusText}`);
+                    }
+
+                    const config = await response.json();
+                    
+                    if (!config.fields || !Array.isArray(config.fields)) {
+                        throw new Error('Invalid configuration: missing or invalid "fields" array');
+                    }
+
+                    this.config = config;
+                    this.renderForm();
+                } catch (error) {
+                    throw new Error(`Error loading form: ${error.message}`);
+                }
+            },
+
+            showError(message) {
+                document.getElementById('loadingState').style.display = 'none';
+                document.getElementById('errorState').style.display = 'block';
+                document.getElementById('errorMessage').textContent = message;
+            },
+
+            renderForm() {
+                document.getElementById('loadingState').style.display = 'none';
+                document.getElementById('formState').style.display = 'block';
+
+                // Set form title
+                document.getElementById('formTitle').textContent = this.config.formTitle || 'Form';
+                
+                // Set subtitle if present
+                if (this.config.formDescription) {
+                    document.getElementById('formSubtitle').textContent = this.config.formDescription;
+                }
+
+                // Set mode if specified in config
+                if (this.config.mode) {
+                    this.mode = this.config.mode;
+                    document.querySelector(`input[name="mode"][value="${this.mode}"]`).checked = true;
+                }
+
+                // Group fields by section
+                const sections = {};
+                this.config.fields.forEach(field => {
+                    const section = field.section || 'General';
+                    if (!sections[section]) sections[section] = [];
+                    sections[section].push(field);
+                });
+
+                // Render sections and fields
+                const formContent = document.getElementById('formContent');
+                formContent.innerHTML = Object.entries(sections).map(([sectionName, fields]) => `
+                    <div class="form-section">
+                        <div class="form-section-title">${sectionName}</div>
+                        ${fields.map(field => this.renderField(field)).join('')}
+                    </div>
+                `).join('');
+            },
+
+            renderField(field) {
+                const fieldId = `field_${field.label.replace(/\s+/g, '_')}`;
+                const requiredClass = field.required ? 'required' : '';
+                const priorityClass = `priority-${field.priority || 'normal'}`;
+
+                switch (field.type) {
+                    case 'text':
+                        return `
+                            <div class="form-field ${priorityClass}">
+                                <label for="${fieldId}" class="${requiredClass}">${field.label}</label>
+                                <input type="text" id="${fieldId}" ${field.required ? 'required' : ''} 
+                                       ${field.regex ? `pattern="${field.regex}"` : ''}>
+                            </div>
+                        `;
+                    
+                    case 'textarea':
+                        return `
+                            <div class="form-field ${priorityClass}">
+                                <label for="${fieldId}" class="${requiredClass}">${field.label}</label>
+                                <textarea id="${fieldId}" ${field.required ? 'required' : ''}></textarea>
+                            </div>
+                        `;
+                    
+                    case 'number':
+                        return `
+                            <div class="form-field ${priorityClass}">
+                                <label for="${fieldId}" class="${requiredClass}">${field.label}</label>
+                                <input type="number" id="${fieldId}" ${field.required ? 'required' : ''}
+                                       ${field.min !== undefined ? `min="${field.min}"` : ''}
+                                       ${field.max !== undefined ? `max="${field.max}"` : ''}>
+                            </div>
+                        `;
+                    
+                    case 'checkbox':
+                        return `
+                            <div class="form-field ${priorityClass}">
+                                <label>
+                                    <input type="checkbox" id="${fieldId}" ${field.required ? 'required' : ''}>
+                                    ${field.label}
+                                </label>
+                            </div>
+                        `;
+                    
+                    case 'radio':
+                        return `
+                            <div class="form-field ${priorityClass}">
+                                <label class="${requiredClass}">${field.label}</label>
+                                <div class="radio-group">
+                                    ${(field.options || []).map((option, i) => `
+                                        <label class="radio-option">
+                                            <input type="radio" name="${fieldId}" value="${option}" 
+                                                   ${field.required && i === 0 ? 'required' : ''}>
+                                            ${option}
+                                        </label>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        `;
+                    
+                    case 'dropdown':
+                        return `
+                            <div class="form-field ${priorityClass}">
+                                <label for="${fieldId}" class="${requiredClass}">${field.label}</label>
+                                <select id="${fieldId}" ${field.required ? 'required' : ''}>
+                                    <option value="">-- Select --</option>
+                                    ${(field.options || []).map(option => `
+                                        <option value="${option}">${option}</option>
+                                    `).join('')}
+                                </select>
+                            </div>
+                        `;
+                    
+                    case 'date':
+                        return `
+                            <div class="form-field ${priorityClass}">
+                                <label for="${fieldId}" class="${requiredClass}">${field.label}</label>
+                                <input type="date" id="${fieldId}" ${field.required ? 'required' : ''}>
+                            </div>
+                        `;
+                    
+                    case 'display':
+                        return `
+                            <div class="form-field ${priorityClass}">
+                                <label>${field.label}</label>
+                                <input type="text" value="${field.displayValue || ''}" readonly 
+                                       style="background: #f0f0f0; cursor: not-allowed;">
+                            </div>
+                        `;
+                    
+                    default:
+                        return '';
+                }
+            },
+
+            setMode(mode) {
+                this.mode = mode;
+            },
+
+            submitForm() {
+                const formContent = document.getElementById('formContent');
+                const formData = {};
+                let validationFailed = false;
+
+                this.config.fields.forEach(field => {
+                    const fieldId = `field_${field.label.replace(/\s+/g, '_')}`;
+                    const element = document.getElementById(fieldId) || formContent.querySelector(`input[name="${fieldId}"]`);
+                    
+                    if (!element) return;
+
+                    if (field.type === 'checkbox') {
+                        formData[field.label] = element.checked;
+                    } else if (field.type === 'radio') {
+                        const selected = formContent.querySelector(`input[name="${fieldId}"]:checked`);
+                        formData[field.label] = selected ? selected.value : null;
+                    } else if (field.type === 'display') {
+                        formData[field.label] = field.displayValue;
+                    } else {
+                        formData[field.label] = element.value;
+                    }
+
+                    // Validation
+                    if (field.required && !formData[field.label]) {
+                        alert(`${field.label} is required`);
+                        validationFailed = true;
+                        element.focus();
+                        return;
+                    }
+
+                    // Number validation
+                    if (field.type === 'number' && formData[field.label]) {
+                        const value = parseFloat(formData[field.label]);
+                        if (field.min !== undefined && value < field.min) {
+                            alert(`${field.label} must be at least ${field.min}`);
+                            validationFailed = true;
+                            element.focus();
+                            return;
+                        }
+                        if (field.max !== undefined && value > field.max) {
+                            alert(`${field.label} must be at most ${field.max}`);
+                            validationFailed = true;
+                            element.focus();
+                            return;
+                        }
+                    }
+                });
+
+                if (validationFailed) return;
+
+                const output = {
+                    formTitle: this.config.formTitle,
+                    mode: this.mode,
+                    timestamp: new Date().toISOString(),
+                    formData: formData
+                };
+
+                document.getElementById('outputContent').textContent = JSON.stringify(output, null, 2);
+                document.getElementById('outputDisplay').style.display = 'block';
+
+                // Scroll to output
+                document.getElementById('outputDisplay').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            },
+
+            resetForm() {
+                const formContent = document.getElementById('formContent');
+                formContent.querySelectorAll('input, textarea, select').forEach(el => {
+                    if (el.type === 'checkbox' || el.type === 'radio') {
+                        el.checked = false;
+                    } else if (!el.readOnly) {
+                        el.value = '';
+                    }
+                });
+                document.getElementById('outputDisplay').style.display = 'none';
+            }
+        };
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', () => executor.init());
+    </script>
+</body>
+</html>
