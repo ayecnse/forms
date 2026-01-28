@@ -1,0 +1,374 @@
+{
+  "formTitle": "Maintenance Work Order Form",
+  "formId": "HOTEL-005",
+  "category": "Maintenance",
+  "sections": ["Work Order Information", "Issue Details", "Location Information", "Assignment Details", "Work Performed", "Completion Details"],
+  "fields": [
+    {
+      "type": "text",
+      "label": "Work Order Number",
+      "section": "Work Order Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Request Date",
+      "section": "Work Order Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Request Time",
+      "section": "Work Order Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Request Source",
+      "section": "Work Order Information",
+      "priority": "normal",
+      "required": false,
+      "options": ["Guest Complaint", "Housekeeping Report", "Routine Inspection", "Preventive Maintenance", "Front Desk", "Engineering Team", "Management", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Reported By",
+      "section": "Work Order Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Work Order Status",
+      "section": "Work Order Information",
+      "priority": "critical",
+      "required": false,
+      "options": ["Open/Pending", "In Progress", "Completed", "On Hold", "Cancelled", "Requires Parts", "Escalated"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Priority Level",
+      "section": "Issue Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Emergency - Immediate", "Urgent - Within 2 Hours", "High - Same Day", "Medium - Within 24 Hours", "Low - Routine", "Scheduled Maintenance"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Problem Category",
+      "section": "Issue Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Plumbing", "Electrical", "HVAC", "Carpentry", "Painting", "Locksmith", "Appliances", "Electronics", "Furniture", "Safety/Security", "Structural", "Landscaping", "Pool/Spa", "Other"]
+    },
+    {
+      "type": "checkbox",
+      "label": "Specific Issue Type",
+      "section": "Issue Details",
+      "priority": "normal",
+      "required": false,
+      "options": ["Leak", "Clog", "Power Outage", "Light Not Working", "AC/Heating Issue", "Door/Lock Problem", "Window Issue", "Broken Fixture", "Damaged Item", "Noise Issue", "Safety Hazard", "Other"]
+    },
+    {
+      "type": "textarea",
+      "label": "Problem Description",
+      "section": "Issue Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Room Occupied?",
+      "section": "Issue Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes - Guest Present", "Yes - Guest Out", "No - Vacant", "Out of Order"]
+    },
+    {
+      "type": "radio",
+      "label": "Affects Guest Safety/Comfort?",
+      "section": "Issue Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes - Critical", "Yes - Moderate", "No"]
+    },
+    {
+      "type": "radio",
+      "label": "Room Can Be Rented?",
+      "section": "Issue Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No - Out of Service"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Location Type",
+      "section": "Location Information",
+      "priority": "critical",
+      "required": false,
+      "options": ["Guest Room", "Suite", "Public Area", "Lobby", "Restaurant", "Bar", "Kitchen", "Pool Area", "Spa/Gym", "Conference Room", "Ballroom", "Parking", "Back of House", "Exterior", "Roof", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Room/Area Number",
+      "section": "Location Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Floor/Level",
+      "section": "Location Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Specific Location Details",
+      "section": "Location Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Assigned Technician Name",
+      "section": "Assignment Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Technician ID",
+      "section": "Assignment Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Technician Department",
+      "section": "Assignment Details",
+      "priority": "normal",
+      "required": false,
+      "options": ["Engineering", "Plumbing", "Electrical", "HVAC", "General Maintenance", "External Contractor", "Other"]
+    },
+    {
+      "type": "date",
+      "label": "Assignment Date",
+      "section": "Assignment Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Assignment Time",
+      "section": "Assignment Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Target Completion Date",
+      "section": "Assignment Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Target Completion Time",
+      "section": "Assignment Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Work Performed Description",
+      "section": "Work Performed",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Work Start Date",
+      "section": "Work Performed",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Work Start Time",
+      "section": "Work Performed",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Work End Date",
+      "section": "Work Performed",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Work End Time",
+      "section": "Work Performed",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Total Labor Hours",
+      "section": "Work Performed",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "checkbox",
+      "label": "Materials/Parts Used",
+      "section": "Work Performed",
+      "priority": "normal",
+      "required": false,
+      "options": ["Pipes", "Valves", "Light Bulbs", "Switches", "Fuses", "Filters", "Paint", "Wood", "Screws/Fasteners", "Sealant/Adhesive", "Cleaning Supplies", "None", "Other"]
+    },
+    {
+      "type": "textarea",
+      "label": "Materials/Parts Details & Quantities",
+      "section": "Work Performed",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Materials Cost",
+      "section": "Work Performed",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Labor Cost",
+      "section": "Work Performed",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Total Cost",
+      "section": "Work Performed",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "External Contractor Used?",
+      "section": "Work Performed",
+      "priority": "optional",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "text",
+      "label": "Contractor Name",
+      "section": "Work Performed",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Contractor Invoice Number",
+      "section": "Work Performed",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Resolution Status",
+      "section": "Completion Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Fully Resolved", "Temporarily Fixed", "Partially Resolved", "Unable to Resolve", "Follow-up Required", "Requires Escalation"]
+    },
+    {
+      "type": "textarea",
+      "label": "Resolution Notes",
+      "section": "Completion Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Follow-up Required?",
+      "section": "Completion Details",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "date",
+      "label": "Follow-up Date",
+      "section": "Completion Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Follow-up Instructions",
+      "section": "Completion Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Guest Notified of Completion?",
+      "section": "Completion Details",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No", "Not Applicable"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Guest Satisfaction",
+      "section": "Completion Details",
+      "priority": "optional",
+      "required": false,
+      "options": ["Very Satisfied", "Satisfied", "Neutral", "Dissatisfied", "Very Dissatisfied", "Not Collected"]
+    },
+    {
+      "type": "textarea",
+      "label": "Additional Comments",
+      "section": "Completion Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Technician Signature",
+      "section": "Completion Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Supervisor Signature",
+      "section": "Completion Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Completion Date",
+      "section": "Completion Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Completion Time",
+      "section": "Completion Details",
+      "priority": "optional",
+      "required": false
+    }
+  ]
+}

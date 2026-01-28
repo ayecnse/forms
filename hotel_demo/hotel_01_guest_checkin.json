@@ -1,0 +1,428 @@
+{
+  "formTitle": "Guest Registration & Check-in Form",
+  "formId": "HOTEL-001",
+  "category": "Front Desk",
+  "sections": ["Guest Information", "Identification Details", "Contact Information", "Reservation Details", "Room Assignment", "Payment Information", "Preferences & Special Requests"],
+  "fields": [
+    {
+      "type": "text",
+      "label": "Registration Number",
+      "section": "Guest Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Check-in Date",
+      "section": "Guest Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Check-in Time",
+      "section": "Guest Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Guest First Name",
+      "section": "Guest Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Guest Last Name",
+      "section": "Guest Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Title",
+      "section": "Guest Information",
+      "priority": "optional",
+      "required": false,
+      "options": ["Mr.", "Mrs.", "Ms.", "Dr.", "Prof.", "Other"]
+    },
+    {
+      "type": "date",
+      "label": "Date of Birth",
+      "section": "Guest Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Gender",
+      "section": "Guest Information",
+      "priority": "optional",
+      "required": false,
+      "options": ["Male", "Female", "Other", "Prefer not to say"]
+    },
+    {
+      "type": "text",
+      "label": "Nationality",
+      "section": "Guest Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Guest Type",
+      "section": "Guest Information",
+      "priority": "normal",
+      "required": false,
+      "options": ["Individual", "Corporate", "Group", "VIP", "Returning Guest", "Loyalty Member"]
+    },
+    {
+      "type": "text",
+      "label": "Loyalty/Membership Number",
+      "section": "Guest Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "ID Type",
+      "section": "Identification Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Passport", "National ID", "Driver's License", "Voter ID", "Other Government ID"]
+    },
+    {
+      "type": "text",
+      "label": "ID Number",
+      "section": "Identification Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Issuing Country",
+      "section": "Identification Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "ID Expiry Date",
+      "section": "Identification Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Visa Number (for international guests)",
+      "section": "Identification Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Primary Phone Number",
+      "section": "Contact Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Alternate Phone Number",
+      "section": "Contact Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Email Address",
+      "section": "Contact Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Home Address",
+      "section": "Contact Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "City",
+      "section": "Contact Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "State/Province",
+      "section": "Contact Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Country",
+      "section": "Contact Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Postal/ZIP Code",
+      "section": "Contact Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Emergency Contact Name",
+      "section": "Contact Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Emergency Contact Phone",
+      "section": "Contact Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Reservation Number",
+      "section": "Reservation Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Booking Source",
+      "section": "Reservation Details",
+      "priority": "normal",
+      "required": false,
+      "options": ["Direct Booking", "Online (Website)", "Phone Booking", "Walk-in", "Travel Agent", "OTA (Booking.com, Expedia, etc.)", "Corporate", "Other"]
+    },
+    {
+      "type": "date",
+      "label": "Expected Check-out Date",
+      "section": "Reservation Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "number",
+      "label": "Number of Nights",
+      "section": "Reservation Details",
+      "priority": "critical",
+      "required": false,
+      "min": 1,
+      "max": 365
+    },
+    {
+      "type": "number",
+      "label": "Number of Adults",
+      "section": "Reservation Details",
+      "priority": "critical",
+      "required": false,
+      "min": 1,
+      "max": 10
+    },
+    {
+      "type": "number",
+      "label": "Number of Children",
+      "section": "Reservation Details",
+      "priority": "normal",
+      "required": false,
+      "min": 0,
+      "max": 10
+    },
+    {
+      "type": "text",
+      "label": "Children Ages",
+      "section": "Reservation Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Purpose of Visit",
+      "section": "Reservation Details",
+      "priority": "optional",
+      "required": false,
+      "options": ["Business", "Leisure", "Conference/Event", "Wedding", "Family Vacation", "Honeymoon", "Other"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Room Type",
+      "section": "Room Assignment",
+      "priority": "critical",
+      "required": false,
+      "options": ["Standard Room", "Deluxe Room", "Executive Room", "Suite", "Presidential Suite", "Family Room", "Connecting Rooms", "Accessible Room"]
+    },
+    {
+      "type": "text",
+      "label": "Room Number",
+      "section": "Room Assignment",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Floor",
+      "section": "Room Assignment",
+      "priority": "optional",
+      "required": false,
+      "options": ["Ground Floor", "1st Floor", "2nd Floor", "3rd Floor", "4th Floor", "5th Floor", "6th Floor", "7th Floor", "8th Floor", "9th Floor", "10th Floor+"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Bed Type",
+      "section": "Room Assignment",
+      "priority": "normal",
+      "required": false,
+      "options": ["Single Bed", "Double Bed", "Queen Bed", "King Bed", "Twin Beds", "Triple", "Other"]
+    },
+    {
+      "type": "dropdown",
+      "label": "View Preference",
+      "section": "Room Assignment",
+      "priority": "optional",
+      "required": false,
+      "options": ["City View", "Ocean View", "Mountain View", "Garden View", "Pool View", "No Preference"]
+    },
+    {
+      "type": "text",
+      "label": "Room Rate per Night",
+      "section": "Room Assignment",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Rate Plan",
+      "section": "Room Assignment",
+      "priority": "normal",
+      "required": false,
+      "options": ["Room Only", "Bed & Breakfast", "Half Board", "Full Board", "All Inclusive", "Corporate Rate", "Special Package"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Payment Method",
+      "section": "Payment Information",
+      "priority": "critical",
+      "required": false,
+      "options": ["Credit Card", "Debit Card", "Cash", "Bank Transfer", "Corporate Account", "Mobile Payment", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Card Type",
+      "section": "Payment Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Card Number (Last 4 digits)",
+      "section": "Payment Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Cardholder Name",
+      "section": "Payment Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Authorization Code",
+      "section": "Payment Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Deposit Amount Paid",
+      "section": "Payment Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Estimated Total Amount",
+      "section": "Payment Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Billing Address (if different)",
+      "section": "Payment Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Smoking Preference",
+      "section": "Preferences & Special Requests",
+      "priority": "normal",
+      "required": false,
+      "options": ["Non-Smoking", "Smoking", "No Preference"]
+    },
+    {
+      "type": "checkbox",
+      "label": "Special Requests",
+      "section": "Preferences & Special Requests",
+      "priority": "optional",
+      "required": false,
+      "options": ["Extra Pillows", "Hypoallergenic Bedding", "Baby Cot/Crib", "High Chair", "Bathrobe", "Iron/Ironing Board", "Refrigerator", "Newspaper", "Early Check-in", "Late Check-out", "Airport Transfer", "None"]
+    },
+    {
+      "type": "textarea",
+      "label": "Dietary Restrictions/Preferences",
+      "section": "Preferences & Special Requests",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Additional Comments/Requests",
+      "section": "Preferences & Special Requests",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Opt-in for Promotional Emails",
+      "section": "Preferences & Special Requests",
+      "priority": "optional",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "text",
+      "label": "Front Desk Agent Name",
+      "section": "Preferences & Special Requests",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Agent Signature",
+      "section": "Preferences & Special Requests",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Guest Signature",
+      "section": "Preferences & Special Requests",
+      "priority": "critical",
+      "required": false
+    }
+  ]
+}

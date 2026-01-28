@@ -1,0 +1,275 @@
+{
+  "formTitle": "Restaurant Order Form",
+  "formId": "HOTEL-006",
+  "category": "Food & Beverage",
+  "sections": ["Order Information", "Customer Details", "Order Items", "Special Requirements", "Payment Details"],
+  "fields": [
+    {
+      "type": "text",
+      "label": "Order Number",
+      "section": "Order Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Order Date",
+      "section": "Order Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Order Time",
+      "section": "Order Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Order Type",
+      "section": "Order Information",
+      "priority": "critical",
+      "required": false,
+      "options": ["Dine-in", "Room Service", "Takeaway", "Delivery", "Buffet", "Event Catering"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Meal Period",
+      "section": "Order Information",
+      "priority": "normal",
+      "required": false,
+      "options": ["Breakfast", "Brunch", "Lunch", "Afternoon Tea", "Dinner", "Late Night", "All Day"]
+    },
+    {
+      "type": "text",
+      "label": "Table Number",
+      "section": "Order Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Room Number",
+      "section": "Order Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Server/Staff Name",
+      "section": "Order Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Guest Name",
+      "section": "Customer Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Guest Phone Number",
+      "section": "Customer Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "number",
+      "label": "Number of Guests",
+      "section": "Customer Details",
+      "priority": "normal",
+      "required": false,
+      "min": 1,
+      "max": 50
+    },
+    {
+      "type": "radio",
+      "label": "Hotel Guest?",
+      "section": "Customer Details",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "textarea",
+      "label": "Item 1 - Description",
+      "section": "Order Items",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "number",
+      "label": "Item 1 - Quantity",
+      "section": "Order Items",
+      "priority": "critical",
+      "required": false,
+      "min": 1,
+      "max": 99
+    },
+    {
+      "type": "text",
+      "label": "Item 1 - Price",
+      "section": "Order Items",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Item 2 - Description",
+      "section": "Order Items",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "number",
+      "label": "Item 2 - Quantity",
+      "section": "Order Items",
+      "priority": "optional",
+      "required": false,
+      "min": 1,
+      "max": 99
+    },
+    {
+      "type": "text",
+      "label": "Item 2 - Price",
+      "section": "Order Items",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Item 3 - Description",
+      "section": "Order Items",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "number",
+      "label": "Item 3 - Quantity",
+      "section": "Order Items",
+      "priority": "optional",
+      "required": false,
+      "min": 1,
+      "max": 99
+    },
+    {
+      "type": "text",
+      "label": "Item 3 - Price",
+      "section": "Order Items",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Additional Items",
+      "section": "Order Items",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Subtotal",
+      "section": "Order Items",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Dietary Restrictions/Allergies",
+      "section": "Special Requirements",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Special Cooking Instructions",
+      "section": "Special Requirements",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Spice Level",
+      "section": "Special Requirements",
+      "priority": "optional",
+      "required": false,
+      "options": ["Mild", "Medium", "Hot", "Extra Hot", "No Spice", "Chef's Choice"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Service Priority",
+      "section": "Special Requirements",
+      "priority": "normal",
+      "required": false,
+      "options": ["ASAP/Rush", "Standard", "Specific Time"]
+    },
+    {
+      "type": "text",
+      "label": "Desired Delivery Time",
+      "section": "Special Requirements",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Additional Notes",
+      "section": "Special Requirements",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Tax Amount",
+      "section": "Payment Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Service Charge",
+      "section": "Payment Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Delivery Charge",
+      "section": "Payment Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Total Amount",
+      "section": "Payment Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Payment Method",
+      "section": "Payment Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Cash", "Credit Card", "Debit Card", "Room Charge", "Mobile Payment", "Complimentary", "Other"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Payment Status",
+      "section": "Payment Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Paid", "Pending", "Room Charged", "Complimentary"]
+    },
+    {
+      "type": "text",
+      "label": "Tip/Gratuity",
+      "section": "Payment Details",
+      "priority": "optional",
+      "required": false
+    }
+  ]
+}

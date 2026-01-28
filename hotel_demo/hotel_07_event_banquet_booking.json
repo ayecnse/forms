@@ -1,0 +1,30 @@
+{
+  "formTitle": "Event & Banquet Booking Form",
+  "formId": "HOTEL-007",
+  "category": "Events",
+  "sections": ["Event Information", "Client Details", "Event Requirements", "Catering Details", "Technical Requirements", "Payment & Contract"],
+  "fields": [
+    {"type": "text", "label": "Booking Reference Number", "section": "Event Information", "priority": "critical", "required": false},
+    {"type": "date", "label": "Booking Date", "section": "Event Information", "priority": "critical", "required": false},
+    {"type": "date", "label": "Event Date", "section": "Event Information", "priority": "critical", "required": false},
+    {"type": "text", "label": "Event Start Time", "section": "Event Information", "priority": "critical", "required": false},
+    {"type": "text", "label": "Event End Time", "section": "Event Information", "priority": "critical", "required": false},
+    {"type": "dropdown", "label": "Event Type", "section": "Event Information", "priority": "critical", "required": false, "options": ["Wedding", "Conference", "Corporate Meeting", "Birthday Party", "Anniversary", "Product Launch", "Training Session", "Gala Dinner", "Other"]},
+    {"type": "text", "label": "Event Name/Title", "section": "Event Information", "priority": "normal", "required": false},
+    {"type": "number", "label": "Expected Attendees", "section": "Event Information", "priority": "critical", "required": false, "min": 1, "max": 5000},
+    {"type": "text", "label": "Client/Organization Name", "section": "Client Details", "priority": "critical", "required": false},
+    {"type": "text", "label": "Contact Person Name", "section": "Client Details", "priority": "critical", "required": false},
+    {"type": "text", "label": "Email Address", "section": "Client Details", "priority": "critical", "required": false},
+    {"type": "text", "label": "Phone Number", "section": "Client Details", "priority": "critical", "required": false},
+    {"type": "textarea", "label": "Billing Address", "section": "Client Details", "priority": "normal", "required": false},
+    {"type": "dropdown", "label": "Venue/Room Selection", "section": "Event Requirements", "priority": "critical", "required": false, "options": ["Grand Ballroom", "Junior Ballroom", "Conference Room A", "Conference Room B", "Board Room", "Outdoor Garden", "Rooftop Terrace", "Multiple Venues", "Other"]},
+    {"type": "dropdown", "label": "Seating Arrangement", "section": "Event Requirements", "priority": "critical", "required": false, "options": ["Theater Style", "Classroom", "U-Shape", "Boardroom", "Banquet Rounds", "Cocktail/Standing", "Hollow Square", "Custom"]},
+    {"type": "radio", "label": "Catering Required?", "section": "Catering Details", "priority": "critical", "required": false, "options": ["Yes", "No"]},
+    {"type": "dropdown", "label": "Meal Type", "section": "Catering Details", "priority": "optional", "required": false, "options": ["Breakfast", "Lunch", "Dinner", "Coffee Break", "Cocktail Reception", "Full Day Package", "Custom Menu"]},
+    {"type": "checkbox", "label": "AV Equipment Required", "section": "Technical Requirements", "priority": "optional", "required": false, "options": ["Projector & Screen", "Microphones", "Sound System", "Stage/Podium", "Lighting", "Video Conferencing", "LED Wall", "None"]},
+    {"type": "text", "label": "Estimated Total Cost", "section": "Payment & Contract", "priority": "critical", "required": false},
+    {"type": "text", "label": "Deposit Amount", "section": "Payment & Contract", "priority": "normal", "required": false},
+    {"type": "dropdown", "label": "Payment Method", "section": "Payment & Contract", "priority": "critical", "required": false, "options": ["Credit Card", "Bank Transfer", "Check", "Corporate Account", "Cash"]},
+    {"type": "text", "label": "Sales Manager Name", "section": "Payment & Contract", "priority": "normal", "required": false}
+  ]
+}

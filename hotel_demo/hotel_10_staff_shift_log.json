@@ -1,0 +1,26 @@
+{
+  "formTitle": "Staff Shift Handover Log",
+  "formId": "HOTEL-010",
+  "category": "Operations",
+  "sections": ["Shift Information", "Occupancy Status", "Important Updates", "Pending Tasks", "Handover Notes"],
+  "fields": [
+    {"type": "date", "label": "Date", "section": "Shift Information", "priority": "critical", "required": false},
+    {"type": "dropdown", "label": "Shift", "section": "Shift Information", "priority": "critical", "required": false, "options": ["Morning (7 AM - 3 PM)", "Evening (3 PM - 11 PM)", "Night (11 PM - 7 AM)"]},
+    {"type": "text", "label": "Outgoing Staff Name", "section": "Shift Information", "priority": "critical", "required": false},
+    {"type": "text", "label": "Incoming Staff Name", "section": "Shift Information", "priority": "critical", "required": false},
+    {"type": "dropdown", "label": "Department", "section": "Shift Information", "priority": "normal", "required": false, "options": ["Front Desk", "Housekeeping", "F&B", "Maintenance", "Security", "Management"]},
+    {"type": "number", "label": "Total Rooms Occupied", "section": "Occupancy Status", "priority": "critical", "required": false, "min": 0, "max": 500},
+    {"type": "number", "label": "Expected Check-ins", "section": "Occupancy Status", "priority": "normal", "required": false, "min": 0, "max": 100},
+    {"type": "number", "label": "Expected Check-outs", "section": "Occupancy Status", "priority": "normal", "required": false, "min": 0, "max": 100},
+    {"type": "number", "label": "VIP Guests", "section": "Occupancy Status", "priority": "normal", "required": false, "min": 0, "max": 50},
+    {"type": "textarea", "label": "VIP Guest Details", "section": "Occupancy Status", "priority": "optional", "required": false},
+    {"type": "textarea", "label": "Incidents Reported", "section": "Important Updates", "priority": "critical", "required": false},
+    {"type": "textarea", "label": "Guest Complaints", "section": "Important Updates", "priority": "normal", "required": false},
+    {"type": "textarea", "label": "Maintenance Issues", "section": "Important Updates", "priority": "normal", "required": false},
+    {"type": "checkbox", "label": "Outstanding Tasks", "section": "Pending Tasks", "priority": "critical", "required": false, "options": ["Room Service Orders", "Maintenance Requests", "Guest Requests", "Deliveries Expected", "Special Arrangements", "None"]},
+    {"type": "textarea", "label": "Task Details", "section": "Pending Tasks", "priority": "normal", "required": false},
+    {"type": "textarea", "label": "General Notes", "section": "Handover Notes", "priority": "optional", "required": false},
+    {"type": "text", "label": "Outgoing Staff Signature", "section": "Handover Notes", "priority": "critical", "required": false},
+    {"type": "text", "label": "Incoming Staff Signature", "section": "Handover Notes", "priority": "critical", "required": false}
+  ]
+}

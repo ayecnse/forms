@@ -1,0 +1,373 @@
+{
+  "formTitle": "Hotel Reservation & Booking Form",
+  "formId": "HOTEL-002",
+  "category": "Reservations",
+  "sections": ["Booking Information", "Guest Details", "Stay Details", "Room Requirements", "Additional Services", "Payment Details", "Cancellation Policy"],
+  "fields": [
+    {
+      "type": "text",
+      "label": "Booking Reference Number",
+      "section": "Booking Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Booking Date",
+      "section": "Booking Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Booking Channel",
+      "section": "Booking Information",
+      "priority": "normal",
+      "required": false,
+      "options": ["Hotel Website", "Phone", "Email", "Walk-in", "OTA - Booking.com", "OTA - Expedia", "OTA - Agoda", "OTA - Airbnb", "Travel Agent", "Corporate", "GDS", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Booking Agent Name",
+      "section": "Booking Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Booking Status",
+      "section": "Booking Information",
+      "priority": "critical",
+      "required": false,
+      "options": ["Tentative", "Confirmed", "Guaranteed", "Waitlisted", "Cancelled", "No-Show"]
+    },
+    {
+      "type": "text",
+      "label": "Guest Name (Primary)",
+      "section": "Guest Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Email Address",
+      "section": "Guest Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Phone Number",
+      "section": "Guest Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Country of Residence",
+      "section": "Guest Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Company Name (if corporate booking)",
+      "section": "Guest Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Loyalty/Membership Number",
+      "section": "Guest Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Is this a repeat guest?",
+      "section": "Guest Details",
+      "priority": "optional",
+      "required": false,
+      "options": ["Yes", "No", "Unknown"]
+    },
+    {
+      "type": "date",
+      "label": "Check-in Date",
+      "section": "Stay Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Check-out Date",
+      "section": "Stay Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Number of Nights",
+      "section": "Stay Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Expected Arrival Time",
+      "section": "Stay Details",
+      "priority": "normal",
+      "required": false,
+      "options": ["Before 12 PM", "12 PM - 3 PM", "3 PM - 6 PM", "6 PM - 9 PM", "After 9 PM", "Uncertain"]
+    },
+    {
+      "type": "number",
+      "label": "Number of Rooms",
+      "section": "Stay Details",
+      "priority": "critical",
+      "required": false,
+      "min": 1,
+      "max": 50
+    },
+    {
+      "type": "number",
+      "label": "Total Number of Guests",
+      "section": "Stay Details",
+      "priority": "critical",
+      "required": false,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "type": "number",
+      "label": "Adults",
+      "section": "Stay Details",
+      "priority": "critical",
+      "required": false,
+      "min": 1,
+      "max": 50
+    },
+    {
+      "type": "number",
+      "label": "Children (under 12)",
+      "section": "Stay Details",
+      "priority": "normal",
+      "required": false,
+      "min": 0,
+      "max": 50
+    },
+    {
+      "type": "number",
+      "label": "Infants (under 2)",
+      "section": "Stay Details",
+      "priority": "optional",
+      "required": false,
+      "min": 0,
+      "max": 10
+    },
+    {
+      "type": "dropdown",
+      "label": "Purpose of Stay",
+      "section": "Stay Details",
+      "priority": "optional",
+      "required": false,
+      "options": ["Business", "Leisure/Vacation", "Conference/Event", "Wedding", "Family Trip", "Romantic Getaway", "Medical Tourism", "Educational", "Other"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Room Type - Room 1",
+      "section": "Room Requirements",
+      "priority": "critical",
+      "required": false,
+      "options": ["Standard Room", "Deluxe Room", "Executive Room", "Junior Suite", "Suite", "Presidential Suite", "Family Room", "Connecting Rooms", "Accessible Room", "Studio"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Bed Preference - Room 1",
+      "section": "Room Requirements",
+      "priority": "normal",
+      "required": false,
+      "options": ["Single Bed", "Double Bed", "Queen Bed", "King Bed", "Twin Beds", "Triple Beds", "No Preference"]
+    },
+    {
+      "type": "dropdown",
+      "label": "View Preference",
+      "section": "Room Requirements",
+      "priority": "optional",
+      "required": false,
+      "options": ["City View", "Ocean/Sea View", "Mountain View", "Garden View", "Pool View", "Courtyard View", "No Preference"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Floor Preference",
+      "section": "Room Requirements",
+      "priority": "optional",
+      "required": false,
+      "options": ["Ground Floor", "Low Floor (1-3)", "Mid Floor (4-7)", "High Floor (8+)", "Top Floor", "No Preference"]
+    },
+    {
+      "type": "radio",
+      "label": "Smoking Preference",
+      "section": "Room Requirements",
+      "priority": "normal",
+      "required": false,
+      "options": ["Non-Smoking", "Smoking", "No Preference"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Room Rate Plan",
+      "section": "Room Requirements",
+      "priority": "critical",
+      "required": false,
+      "options": ["Room Only", "Bed & Breakfast (BB)", "Half Board (HB)", "Full Board (FB)", "All Inclusive", "Corporate Rate", "Government Rate", "Group Rate", "Special Package"]
+    },
+    {
+      "type": "text",
+      "label": "Rate per Night (per room)",
+      "section": "Room Requirements",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Total Estimated Cost",
+      "section": "Room Requirements",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Discount/Promo Code",
+      "section": "Room Requirements",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "checkbox",
+      "label": "Additional Services Requested",
+      "section": "Additional Services",
+      "priority": "optional",
+      "required": false,
+      "options": ["Airport Pickup", "Airport Drop-off", "Breakfast", "Parking", "WiFi", "Spa Services", "Gym Access", "Late Check-out", "Early Check-in", "Baby Cot", "Extra Bed", "Welcome Amenities", "Room Decoration", "None"]
+    },
+    {
+      "type": "textarea",
+      "label": "Special Requests/Requirements",
+      "section": "Additional Services",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Dietary Requirements/Allergies",
+      "section": "Additional Services",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Accessibility Needs?",
+      "section": "Additional Services",
+      "priority": "optional",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "textarea",
+      "label": "Accessibility Details",
+      "section": "Additional Services",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Payment Method",
+      "section": "Payment Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Credit Card", "Debit Card", "Bank Transfer", "PayPal", "Cash on Arrival", "Corporate Account", "Travel Voucher", "Other"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Payment Type",
+      "section": "Payment Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Full Prepayment", "Partial Prepayment", "Deposit Only", "Pay at Hotel", "Corporate Billing"]
+    },
+    {
+      "type": "text",
+      "label": "Amount Paid",
+      "section": "Payment Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Balance Due",
+      "section": "Payment Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Payment Confirmation Number",
+      "section": "Payment Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Guarantee Type",
+      "section": "Payment Details",
+      "priority": "normal",
+      "required": false,
+      "options": ["Credit Card Guarantee", "Advance Payment", "Corporate Guarantee", "No Guarantee"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Cancellation Policy",
+      "section": "Cancellation Policy",
+      "priority": "critical",
+      "required": false,
+      "options": ["Free Cancellation (up to 24 hours before)", "Free Cancellation (up to 48 hours before)", "Free Cancellation (up to 7 days before)", "Non-Refundable", "Flexible", "Moderate", "Strict"]
+    },
+    {
+      "type": "display",
+      "label": "Cancellation Terms",
+      "section": "Cancellation Policy",
+      "priority": "critical",
+      "required": false,
+      "displayValue": "Please review our cancellation policy. Cancellations or changes made after the free cancellation period may incur charges."
+    },
+    {
+      "type": "radio",
+      "label": "Guest Accepts Cancellation Policy",
+      "section": "Cancellation Policy",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "textarea",
+      "label": "Special Instructions/Notes",
+      "section": "Cancellation Policy",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Booking Confirmation Sent To",
+      "section": "Cancellation Policy",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Reservation Agent Name",
+      "section": "Cancellation Policy",
+      "priority": "optional",
+      "required": false
+    }
+  ]
+}

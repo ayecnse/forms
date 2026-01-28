@@ -1,0 +1,474 @@
+{
+  "formTitle": "Guest Check-out Form",
+  "formId": "HOTEL-003",
+  "category": "Front Desk",
+  "sections": ["Check-out Information", "Guest Details", "Room Details", "Billing Summary", "Payment Settlement", "Feedback & Survey", "Departure Details"],
+  "fields": [
+    {
+      "type": "text",
+      "label": "Check-out Number",
+      "section": "Check-out Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Check-out Date",
+      "section": "Check-out Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Check-out Time",
+      "section": "Check-out Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Check-out Type",
+      "section": "Check-out Information",
+      "priority": "normal",
+      "required": false,
+      "options": ["Regular Check-out", "Express Check-out", "Late Check-out", "Early Check-out"]
+    },
+    {
+      "type": "text",
+      "label": "Registration Number",
+      "section": "Guest Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Guest Name",
+      "section": "Guest Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Room Number",
+      "section": "Guest Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Check-in Date",
+      "section": "Guest Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Total Nights Stayed",
+      "section": "Guest Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Number of Guests",
+      "section": "Guest Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Room Type",
+      "section": "Room Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Room Condition on Check-out",
+      "section": "Room Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Good - No Issues", "Minor Cleaning Required", "Damage Reported", "Lost Items", "Deep Cleaning Required"]
+    },
+    {
+      "type": "textarea",
+      "label": "Room Inspection Notes",
+      "section": "Room Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Minibar Items Consumed?",
+      "section": "Room Details",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No", "Not Checked"]
+    },
+    {
+      "type": "textarea",
+      "label": "Minibar Charges Details",
+      "section": "Room Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Room Safe Used?",
+      "section": "Room Details",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes - Cleared", "Yes - Not Cleared", "No"]
+    },
+    {
+      "type": "radio",
+      "label": "Key Card Returned?",
+      "section": "Room Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes - All Keys", "Partial", "No"]
+    },
+    {
+      "type": "text",
+      "label": "Number of Keys Returned",
+      "section": "Room Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Room Rate (per night)",
+      "section": "Billing Summary",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Room Charges Total",
+      "section": "Billing Summary",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Food & Beverage Charges",
+      "section": "Billing Summary",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Minibar Charges",
+      "section": "Billing Summary",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Laundry Charges",
+      "section": "Billing Summary",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Telephone/Internet Charges",
+      "section": "Billing Summary",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Spa/Wellness Charges",
+      "section": "Billing Summary",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Transportation Charges",
+      "section": "Billing Summary",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Parking Charges",
+      "section": "Billing Summary",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Late Check-out Charges",
+      "section": "Billing Summary",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Damage Charges",
+      "section": "Billing Summary",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Other Charges",
+      "section": "Billing Summary",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Subtotal",
+      "section": "Billing Summary",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Taxes (Specify %)",
+      "section": "Billing Summary",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Service Charges",
+      "section": "Billing Summary",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Discounts Applied",
+      "section": "Billing Summary",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Grand Total",
+      "section": "Billing Summary",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Amount Paid Previously (Deposit)",
+      "section": "Payment Settlement",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Balance Due",
+      "section": "Payment Settlement",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Payment Method",
+      "section": "Payment Settlement",
+      "priority": "critical",
+      "required": false,
+      "options": ["Credit Card", "Debit Card", "Cash", "Bank Transfer", "Mobile Payment", "Corporate Account", "Complimentary", "Multiple Methods"]
+    },
+    {
+      "type": "text",
+      "label": "Amount Paid Now",
+      "section": "Payment Settlement",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Payment Reference Number",
+      "section": "Payment Settlement",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Credit Card Last 4 Digits",
+      "section": "Payment Settlement",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Security Deposit Refunded?",
+      "section": "Payment Settlement",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes - Full", "Yes - Partial", "No - Deductions Made", "Not Applicable"]
+    },
+    {
+      "type": "text",
+      "label": "Refund Amount",
+      "section": "Payment Settlement",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Refund/Deduction Reason",
+      "section": "Payment Settlement",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Receipt Provided?",
+      "section": "Payment Settlement",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes - Printed", "Yes - Email", "Both", "No"]
+    },
+    {
+      "type": "text",
+      "label": "Invoice Number",
+      "section": "Payment Settlement",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Overall Satisfaction Rating",
+      "section": "Feedback & Survey",
+      "priority": "normal",
+      "required": false,
+      "options": ["5 - Excellent", "4 - Very Good", "3 - Good", "2 - Fair", "1 - Poor", "Not Provided"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Room Cleanliness Rating",
+      "section": "Feedback & Survey",
+      "priority": "optional",
+      "required": false,
+      "options": ["5 - Excellent", "4 - Very Good", "3 - Good", "2 - Fair", "1 - Poor"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Staff Service Rating",
+      "section": "Feedback & Survey",
+      "priority": "optional",
+      "required": false,
+      "options": ["5 - Excellent", "4 - Very Good", "3 - Good", "2 - Fair", "1 - Poor"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Facilities Rating",
+      "section": "Feedback & Survey",
+      "priority": "optional",
+      "required": false,
+      "options": ["5 - Excellent", "4 - Very Good", "3 - Good", "2 - Fair", "1 - Poor"]
+    },
+    {
+      "type": "radio",
+      "label": "Would You Recommend Us?",
+      "section": "Feedback & Survey",
+      "priority": "optional",
+      "required": false,
+      "options": ["Yes - Definitely", "Yes - Probably", "Maybe", "Probably Not", "Definitely Not"]
+    },
+    {
+      "type": "radio",
+      "label": "Would You Stay Again?",
+      "section": "Feedback & Survey",
+      "priority": "optional",
+      "required": false,
+      "options": ["Yes", "Maybe", "No"]
+    },
+    {
+      "type": "textarea",
+      "label": "Comments/Suggestions",
+      "section": "Feedback & Survey",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Complaints/Issues Reported",
+      "section": "Feedback & Survey",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Transportation Arranged?",
+      "section": "Departure Details",
+      "priority": "optional",
+      "required": false,
+      "options": ["Yes - Hotel Arranged", "Yes - Guest Arranged", "No"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Departure Transport Type",
+      "section": "Departure Details",
+      "priority": "optional",
+      "required": false,
+      "options": ["Airport Transfer", "Taxi", "Private Car", "Rental Car", "Public Transport", "Walking", "Other"]
+    },
+    {
+      "type": "text",
+      "label": "Departure Time",
+      "section": "Departure Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Luggage Assistance Provided?",
+      "section": "Departure Details",
+      "priority": "optional",
+      "required": false,
+      "options": ["Yes", "No", "Not Required"]
+    },
+    {
+      "type": "radio",
+      "label": "Left Items in Lost & Found?",
+      "section": "Departure Details",
+      "priority": "optional",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "textarea",
+      "label": "Lost & Found Details",
+      "section": "Departure Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Additional Notes",
+      "section": "Departure Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Front Desk Agent Name",
+      "section": "Departure Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Guest Signature",
+      "section": "Departure Details",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Signature Date",
+      "section": "Departure Details",
+      "priority": "normal",
+      "required": false
+    }
+  ]
+}

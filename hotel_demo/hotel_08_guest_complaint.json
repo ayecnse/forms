@@ -1,0 +1,26 @@
+{
+  "formTitle": "Guest Complaint Form",
+  "formId": "HOTEL-008",
+  "category": "Guest Services",
+  "sections": ["Complaint Information", "Guest Details", "Complaint Details", "Action Taken", "Resolution"],
+  "fields": [
+    {"type": "text", "label": "Complaint Number", "section": "Complaint Information", "priority": "critical", "required": false},
+    {"type": "date", "label": "Date Reported", "section": "Complaint Information", "priority": "critical", "required": false},
+    {"type": "text", "label": "Time Reported", "section": "Complaint Information", "priority": "critical", "required": false},
+    {"type": "dropdown", "label": "Reported Via", "section": "Complaint Information", "priority": "normal", "required": false, "options": ["In Person", "Phone", "Email", "Social Media", "Review Site", "Other"]},
+    {"type": "text", "label": "Guest Name", "section": "Guest Details", "priority": "critical", "required": false},
+    {"type": "text", "label": "Room Number", "section": "Guest Details", "priority": "normal", "required": false},
+    {"type": "text", "label": "Contact Number", "section": "Guest Details", "priority": "normal", "required": false},
+    {"type": "dropdown", "label": "Complaint Category", "section": "Complaint Details", "priority": "critical", "required": false, "options": ["Room Cleanliness", "Room Maintenance", "Noise", "Staff Behavior", "Food & Beverage", "Billing Issue", "Reservation Error", "Amenity Issue", "Safety/Security", "Other"]},
+    {"type": "dropdown", "label": "Severity Level", "section": "Complaint Details", "priority": "critical", "required": false, "options": ["Critical", "High", "Medium", "Low"]},
+    {"type": "textarea", "label": "Complaint Description", "section": "Complaint Details", "priority": "critical", "required": false},
+    {"type": "text", "label": "Staff Member Involved (if any)", "section": "Complaint Details", "priority": "optional", "required": false},
+    {"type": "textarea", "label": "Immediate Action Taken", "section": "Action Taken", "priority": "critical", "required": false},
+    {"type": "text", "label": "Handled By", "section": "Action Taken", "priority": "normal", "required": false},
+    {"type": "dropdown", "label": "Resolution Status", "section": "Resolution", "priority": "critical", "required": false, "options": ["Resolved", "Partially Resolved", "In Progress", "Escalated", "Unresolved"]},
+    {"type": "textarea", "label": "Resolution Details", "section": "Resolution", "priority": "normal", "required": false},
+    {"type": "radio", "label": "Compensation Offered?", "section": "Resolution", "priority": "normal", "required": false, "options": ["Yes", "No"]},
+    {"type": "textarea", "label": "Compensation Details", "section": "Resolution", "priority": "optional", "required": false},
+    {"type": "dropdown", "label": "Guest Satisfaction After Resolution", "section": "Resolution", "priority": "normal", "required": false, "options": ["Very Satisfied", "Satisfied", "Neutral", "Dissatisfied", "Very Dissatisfied", "No Response"]}
+  ]
+}

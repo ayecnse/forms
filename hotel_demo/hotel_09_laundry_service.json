@@ -1,0 +1,19 @@
+{
+  "formTitle": "Laundry Service Request Form",
+  "formId": "HOTEL-009",
+  "category": "Guest Services",
+  "sections": ["Request Information", "Guest Details", "Service Details", "Item List", "Charges"],
+  "fields": [
+    {"type": "text", "label": "Laundry Ticket Number", "section": "Request Information", "priority": "critical", "required": false},
+    {"type": "date", "label": "Request Date", "section": "Request Information", "priority": "critical", "required": false},
+    {"type": "text", "label": "Pickup Time", "section": "Request Information", "priority": "normal", "required": false},
+    {"type": "text", "label": "Guest Name", "section": "Guest Details", "priority": "critical", "required": false},
+    {"type": "text", "label": "Room Number", "section": "Guest Details", "priority": "critical", "required": false},
+    {"type": "dropdown", "label": "Service Type", "section": "Service Details", "priority": "critical", "required": false, "options": ["Wash & Iron", "Dry Clean", "Iron Only", "Express Service", "Wash & Fold"]},
+    {"type": "dropdown", "label": "Delivery Time", "section": "Service Details", "priority": "critical", "required": false, "options": ["Same Day", "Next Day", "Express (4 hours)", "Standard (24 hours)", "Specific Time"]},
+    {"type": "number", "label": "Total Pieces", "section": "Item List", "priority": "critical", "required": false, "min": 1, "max": 100},
+    {"type": "textarea", "label": "Item Details", "section": "Item List", "priority": "critical", "required": false},
+    {"type": "text", "label": "Total Charges", "section": "Charges", "priority": "critical", "required": false},
+    {"type": "dropdown", "label": "Payment Method", "section": "Charges", "priority": "critical", "required": false, "options": ["Room Charge", "Cash", "Credit Card"]}
+  ]
+}

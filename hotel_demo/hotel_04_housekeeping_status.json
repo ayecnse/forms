@@ -1,0 +1,386 @@
+{
+  "formTitle": "Housekeeping Room Status Form",
+  "formId": "HOTEL-004",
+  "category": "Housekeeping",
+  "sections": ["Room Information", "Room Status", "Cleaning Details", "Amenities Check", "Maintenance Issues", "Quality Control"],
+  "fields": [
+    {
+      "type": "text",
+      "label": "Inspection ID",
+      "section": "Room Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date",
+      "section": "Room Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Time",
+      "section": "Room Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Room Number",
+      "section": "Room Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Floor",
+      "section": "Room Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Room Type",
+      "section": "Room Information",
+      "priority": "normal",
+      "required": false,
+      "options": ["Standard", "Deluxe", "Executive", "Suite", "Presidential Suite", "Family Room"]
+    },
+    {
+      "type": "text",
+      "label": "Housekeeper Name",
+      "section": "Room Information",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Housekeeper ID",
+      "section": "Room Information",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Current Room Status",
+      "section": "Room Status",
+      "priority": "critical",
+      "required": false,
+      "options": ["Vacant Clean", "Vacant Dirty", "Occupied Clean", "Occupied Dirty", "Out of Order", "Under Maintenance", "Inspected", "Do Not Disturb"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Previous Room Status",
+      "section": "Room Status",
+      "priority": "normal",
+      "required": false,
+      "options": ["Vacant Clean", "Vacant Dirty", "Occupied Clean", "Occupied Dirty", "Check-out", "Stayover"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Service Type",
+      "section": "Room Status",
+      "priority": "critical",
+      "required": false,
+      "options": ["Full Service (Check-out)", "Stayover Service", "Turndown Service", "Refresh Service", "Deep Cleaning", "Touch-up Only"]
+    },
+    {
+      "type": "radio",
+      "label": "Guest Present During Service?",
+      "section": "Room Status",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "radio",
+      "label": "Do Not Disturb Sign?",
+      "section": "Room Status",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "text",
+      "label": "Service Start Time",
+      "section": "Cleaning Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Service End Time",
+      "section": "Cleaning Details",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Total Time Taken (minutes)",
+      "section": "Cleaning Details",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "checkbox",
+      "label": "Cleaning Tasks Completed",
+      "section": "Cleaning Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Bed Made/Linen Changed", "Bathroom Cleaned", "Floor Vacuumed/Mopped", "Furniture Dusted", "Windows Cleaned", "Mirrors Cleaned", "Trash Removed", "Minibar Restocked", "Safe Checked", "Curtains/Blinds Adjusted", "AC/Heating Checked", "Lights Checked", "TV Remote Sanitized"]
+    },
+    {
+      "type": "radio",
+      "label": "Bed Linens Changed?",
+      "section": "Cleaning Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes - Full Change", "No - Bed Made Only", "Partial Change"]
+    },
+    {
+      "type": "radio",
+      "label": "Towels Replaced?",
+      "section": "Cleaning Details",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes - All", "Partial", "No"]
+    },
+    {
+      "type": "number",
+      "label": "Number of Towels Provided",
+      "section": "Cleaning Details",
+      "priority": "optional",
+      "required": false,
+      "min": 0,
+      "max": 20
+    },
+    {
+      "type": "dropdown",
+      "label": "Bathroom Condition",
+      "section": "Cleaning Details",
+      "priority": "normal",
+      "required": false,
+      "options": ["Excellent", "Good", "Needs Attention", "Requires Deep Clean"]
+    },
+    {
+      "type": "checkbox",
+      "label": "Amenities Checked & Replenished",
+      "section": "Amenities Check",
+      "priority": "critical",
+      "required": false,
+      "options": ["Shampoo", "Conditioner", "Body Wash", "Soap", "Lotion", "Toilet Paper", "Tissues", "Dental Kit", "Shower Cap", "Sewing Kit", "Slippers", "Bathrobe", "Coffee/Tea", "Water Bottles", "Stationery", "All Complete"]
+    },
+    {
+      "type": "textarea",
+      "label": "Missing Amenities (Specify)",
+      "section": "Amenities Check",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Minibar Checked?",
+      "section": "Amenities Check",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes - Fully Stocked", "Yes - Partially Stocked", "Empty/Needs Restocking", "Not Applicable"]
+    },
+    {
+      "type": "textarea",
+      "label": "Minibar Items Consumed (for billing)",
+      "section": "Amenities Check",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Room Safe Operational?",
+      "section": "Amenities Check",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No", "Not Checked"]
+    },
+    {
+      "type": "radio",
+      "label": "TV/Remote Working?",
+      "section": "Amenities Check",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No", "Not Checked"]
+    },
+    {
+      "type": "radio",
+      "label": "AC/Heating Functional?",
+      "section": "Amenities Check",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No", "Not Checked"]
+    },
+    {
+      "type": "radio",
+      "label": "All Lights Working?",
+      "section": "Amenities Check",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No - Issues Noted"]
+    },
+    {
+      "type": "radio",
+      "label": "Telephone Working?",
+      "section": "Amenities Check",
+      "priority": "optional",
+      "required": false,
+      "options": ["Yes", "No", "Not Checked"]
+    },
+    {
+      "type": "radio",
+      "label": "WiFi Signal Strong?",
+      "section": "Amenities Check",
+      "priority": "optional",
+      "required": false,
+      "options": ["Yes", "Weak", "Not Checked"]
+    },
+    {
+      "type": "radio",
+      "label": "Maintenance Issues Found?",
+      "section": "Maintenance Issues",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "checkbox",
+      "label": "Type of Maintenance Required",
+      "section": "Maintenance Issues",
+      "priority": "optional",
+      "required": false,
+      "options": ["Plumbing", "Electrical", "AC/Heating", "Furniture Damage", "Wall/Paint Damage", "Carpet Damage", "Door/Lock Issue", "Window Issue", "Bathroom Fixtures", "TV/Electronics", "Other"]
+    },
+    {
+      "type": "textarea",
+      "label": "Maintenance Issue Description",
+      "section": "Maintenance Issues",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Priority Level",
+      "section": "Maintenance Issues",
+      "priority": "optional",
+      "required": false,
+      "options": ["Urgent - Room Cannot Be Sold", "High - Affects Guest Comfort", "Medium - Can Wait", "Low - Cosmetic Only"]
+    },
+    {
+      "type": "text",
+      "label": "Maintenance Request Number",
+      "section": "Maintenance Issues",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Lost & Found Items?",
+      "section": "Maintenance Issues",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "textarea",
+      "label": "Lost & Found Details",
+      "section": "Maintenance Issues",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Lost & Found Tag Number",
+      "section": "Maintenance Issues",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Room Ready for Inspection?",
+      "section": "Quality Control",
+      "priority": "critical",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Overall Room Cleanliness",
+      "section": "Quality Control",
+      "priority": "critical",
+      "required": false,
+      "options": ["Excellent", "Good", "Satisfactory", "Needs Improvement", "Unsatisfactory"]
+    },
+    {
+      "type": "radio",
+      "label": "Supervisor Inspection Required?",
+      "section": "Quality Control",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No"]
+    },
+    {
+      "type": "text",
+      "label": "Supervisor Name",
+      "section": "Quality Control",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "dropdown",
+      "label": "Supervisor Inspection Result",
+      "section": "Quality Control",
+      "priority": "optional",
+      "required": false,
+      "options": ["Approved", "Approved with Minor Notes", "Re-clean Required", "Not Yet Inspected"]
+    },
+    {
+      "type": "textarea",
+      "label": "Supervisor Comments",
+      "section": "Quality Control",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Additional Notes/Comments",
+      "section": "Quality Control",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Housekeeper Signature",
+      "section": "Quality Control",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Supervisor Signature",
+      "section": "Quality Control",
+      "priority": "optional",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Completion Date",
+      "section": "Quality Control",
+      "priority": "critical",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Completion Time",
+      "section": "Quality Control",
+      "priority": "critical",
+      "required": false
+    }
+  ]
+}
