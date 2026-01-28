@@ -1,0 +1,116 @@
+{
+  "formTitle": "Medical History Form",
+  "sections": ["Personal Information", "Medical Background", "Current Health Status", "Medications & Allergies", "Lifestyle & Habits"],
+  "fields": [
+    {
+      "type": "text",
+      "label": "Full Name",
+      "section": "Personal Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "date",
+      "label": "Date of Birth",
+      "section": "Personal Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Gender",
+      "section": "Personal Information",
+      "priority": "normal",
+      "required": false,
+      "options": ["Male", "Female", "Other", "Prefer not to say"]
+    },
+    {
+      "type": "text",
+      "label": "Phone Number",
+      "section": "Personal Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Email Address",
+      "section": "Personal Information",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Previous Medical Conditions",
+      "section": "Medical Background",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Previous Surgeries",
+      "section": "Medical Background",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Family Medical History",
+      "section": "Medical Background",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "checkbox",
+      "label": "Chronic Conditions",
+      "section": "Current Health Status",
+      "priority": "normal",
+      "required": false,
+      "options": ["Diabetes", "Hypertension", "Heart Disease", "Asthma", "Arthritis", "None"]
+    },
+    {
+      "type": "textarea",
+      "label": "Current Symptoms",
+      "section": "Current Health Status",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Current Medications",
+      "section": "Medications & Allergies",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "textarea",
+      "label": "Known Allergies",
+      "section": "Medications & Allergies",
+      "priority": "normal",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Do you smoke?",
+      "section": "Lifestyle & Habits",
+      "priority": "normal",
+      "required": false,
+      "options": ["Yes", "No", "Former smoker"]
+    },
+    {
+      "type": "radio",
+      "label": "Alcohol consumption",
+      "section": "Lifestyle & Habits",
+      "priority": "normal",
+      "required": false,
+      "options": ["Never", "Occasionally", "Regularly"]
+    },
+    {
+      "type": "dropdown",
+      "label": "Exercise frequency",
+      "section": "Lifestyle & Habits",
+      "priority": "normal",
+      "required": false,
+      "options": ["Never", "1-2 times per week", "3-4 times per week", "5+ times per week"]
+    }
+  ]
+}
